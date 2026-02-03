@@ -4,25 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Appliance Repair Services | Fairy Tale Child Care</title>
+    <title>Programs & Services | Fairy Tale Child Care</title>
     <meta name="description"
-        content="Professional repair for refrigerators, washers, dryers, ovens, dishwashers, and microwaves. Same-day service in the Antelope Valley. Call 661-XXX-XXXX.">
-    <link rel="canonical" href="https://d3jg5wepg4zxcs.cloudfront.net/services/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://d3jg5wepg4zxcs.cloudfront.net/services/">
-    <meta property="og:title" content="Our Services | Fairy Tale Child Care">
-    <meta property="og:description"
-        content="Comprehensive appliance repair for all major household brands. Fast, affordable, and expert service.">
-    <meta property="og:image" content="https://d3jg5wepg4zxcs.cloudfront.net/images/hero-home.webp">
+        content="Explore our nurturing programs for infants, toddlers, preschool, and after-school care. Magical learning environments in Palmdale.">
+    <link rel="canonical" href="https://fairytalechildcare.com/services/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css?v=2.1">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <style>
         :root {
-            --p: #1F6AE1;
-            --d: #004488;
-            --t: #1a1a1a;
-            --l: #f9fbfc;
+            --p: #FCD85D;
+            --p-pink: #F28FB5;
+            --p-blue: #91D8E4;
+            --d: #00457C;
+            --t: #2D3436;
+            --l: #FFFDF7;
             --w: #ffffff;
-            --s: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --s: 'Quicksand', sans-serif;
+            --f-h: 'Bubblegum Sans', cursive;
         }
 
         * {
@@ -35,7 +40,7 @@
             font-family: var(--s);
             color: var(--t);
             line-height: 1.6;
-            background: var(--w);
+            background: var(--l);
             -webkit-font-smoothing: antialiased;
         }
 
@@ -61,14 +66,14 @@
         }
 
         .logo {
+            font-family: var(--f-h);
             font-size: 24px;
-            font-weight: 900;
             color: var(--d);
             text-decoration: none;
         }
 
         .logo span {
-            color: var(--p);
+            color: var(--p-pink);
         }
 
         nav ul {
@@ -86,36 +91,20 @@
 
         nav a:hover,
         nav a.a {
-            color: var(--p);
-        }
-
-        .b {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            border: none;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .b-p {
-            background: var(--p);
-            color: var(--w);
-            box-shadow: 0 4px 15px rgba(31, 106, 225, 0.3);
+            color: var(--p-pink);
         }
 
         .hero-mini {
-            background: var(--d);
+            background: linear-gradient(var(--d), var(--p-blue));
             color: var(--w);
             padding: 80px 0;
             text-align: center;
         }
 
         .hero-mini h1 {
-            font-size: 3rem;
-            font-weight: 900;
+            font-family: var(--f-h);
+            font-size: 3.5rem;
+            font-weight: 400;
         }
 
         .s-grid {
@@ -127,19 +116,21 @@
 
         .s-card {
             padding: 50px;
-            border-radius: 30px;
+            border-radius: 40px;
             background: var(--w);
             border: 1px solid #eee;
             transition: 0.3s;
+            text-align: center;
         }
 
         .s-card:hover {
             transform: translateY(-5px);
-            border-color: var(--p);
+            border-color: var(--p-pink);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
         }
 
         .s-card h2 {
+            font-family: var(--f-h);
             font-size: 2rem;
             color: var(--d);
             margin-bottom: 20px;
@@ -152,18 +143,19 @@
         }
 
         .s-card .link {
-            color: var(--p);
+            background: var(--p-pink);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-block;
         }
 
         .footer {
-            background: #0a0a0a;
+            background: #2D3436;
             color: var(--w);
-            padding: 80px 0 40px;
+            padding: 60px 0;
             text-align: center;
         }
 
@@ -190,10 +182,6 @@
             .menu-t {
                 display: block;
             }
-
-            .m-hide {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -201,12 +189,13 @@
 <body>
     <header>
         <div class="c">
-            <a href="/" class="logo">Mobile <span>Appliance Repair</span></a>
+            <a href="/" class="logo">Fairy Tale <span>Child Care</span></a>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/services/" class="a">Services</a></li>
                     <li><a href="/about/">About</a></li>
+                    <li><a href="/blog/">Blog</a></li>
                     <li><a href="/contact/">Contact</a></li>
                 </ul>
             </nav>
@@ -221,46 +210,36 @@
     <main>
         <section class="hero-mini">
             <div class="c">
-                <h1>Our Repair Services</h1>
-                <p style="margin-top:15px; opacity:0.9;">Professional, same-day repairs for all major household
-                    appliances.</p>
+                <h1>Our Magical Programs</h1>
+                <p style="margin-top:15px; opacity:0.9;">Discover the perfect program for your child's growth and
+                    discovery.</p>
             </div>
         </section>
         <section class="c">
             <div class="s-grid">
                 <div class="s-card">
-                    <h2>Refrigerator Repair</h2>
-                    <p>Fixing cooling failures, ice makers, and seal leaks for all major brands including Samsung and
-                        LG.</p>
-                    <a href="/services/refrigerator-repair/" class="link">Explore Details &rarr;</a>
-                </div>
-                <div class="s-card">
-                    <h2>Washer Repair</h2>
-                    <p>Expert diagnostic and repair for drainage, spinning, and motor issues in top and front-load
-                        washers.</p>
-                    <a href="/services/washer-repair/" class="link">Explore Details &rarr;</a>
-                </div>
-                <div class="s-card">
-                    <h2>Dryer Repair</h2>
-                    <p>Resolving heating failures, tumble problems, and vent blockages for gas and electric dryers.</p>
-                    <a href="/services/dryer-repair/" class="link">Explore Details &rarr;</a>
-                </div>
-                <div class="s-card">
-                    <h2>Oven & Stove</h2>
-                    <p>Precision repair for igniters, heating elements, and thermostat calibration across all brands.
+                    <h2>Infant Care</h2>
+                    <p>Nurturing and safe infant care for babies 0-18 months. Small ratios and personalized attention.
                     </p>
-                    <a href="/services/oven-stove-repair/" class="link">Explore Details &rarr;</a>
+                    <a href="/services/infant-care/" class="link">Explore Program &rarr;</a>
                 </div>
                 <div class="s-card">
-                    <h2>Dishwasher Repair</h2>
-                    <p>Stopping leaks, fixing spray arm issues, and ensuring your dishes come out sparkling every time.
+                    <h2>Toddler Care</h2>
+                    <p>Active and engaging toddler care for children 18 months to 3 years. Focused on discovery and
+                        social play.</p>
+                    <a href="/services/toddler-care/" class="link">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <h2>Preschool</h2>
+                    <p>Spark imagination and prepare for kindergarten with our storybook-themed Pre-K curriculum (ages
+                        3-5).</p>
+                    <a href="/services/preschool/" class="link">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <h2>After-School</h2>
+                    <p>Safe and fun after-school care with homework help, healthy snacks, and plenty of playground time.
                     </p>
-                    <a href="/services/dishwasher-repair/" class="link">Explore Details &rarr;</a>
-                </div>
-                <div class="s-card">
-                    <h2>Microwave Repair</h2>
-                    <p>Safe, professional repair for magnetron issues, turntable failures, and keypad malfunctions.</p>
-                    <a href="/services/microwave-repair/" class="link">Explore Details &rarr;</a>
+                    <a href="/services/after-school/" class="link">Explore Program &rarr;</a>
                 </div>
             </div>
         </section>
