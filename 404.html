@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops! Page Not Found | Fairy Tale Child Care</title>
+    <meta name="description"
+        content="Even the best stories have a little mystery. We can't find the page you're looking for.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css?v=2.1">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        :root {
+            --p: #FCD85D;
+            --p-pink: #F28FB5;
+            --p-blue: #91D8E4;
+            --d: #00457C;
+            --t: #2D3436;
+            --s: 'Quicksand', sans-serif;
+            --f-h: 'Bubblegum Sans', cursive;
+        }
+
+        body {
+            font-family: var(--s);
+            color: var(--t);
+            background: #FFFDF7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background: linear-gradient(var(--p-pink), var(--p));
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: var(--f-h);
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin: 0;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 20px 0 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: white;
+            color: var(--p-pink);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .footer {
+            background: var(--t);
+            color: white;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>404</h1>
+        <p>Even the best fairy tales have a few missing pages! We can't find the page you're looking for, but the magic
+            is still everywhere else.</p>
+        <a href="/" class="btn">Back to the Story</a>
+    </div>
+
+    <footer class="footer">
+        <div class="c">
+            <p>© 2026 Fairy Tale Child Care. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
