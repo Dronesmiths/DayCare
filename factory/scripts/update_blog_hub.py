@@ -23,7 +23,17 @@ def update_blog_hub():
         {"slug": "consistent-routine-for-toddlers", "title": "The Power of Patterns: Creating a Routine for Toddlers", "cat": "Parent Guides", "desc": "Why toddlers need routine and how to build one that works for your family..."},
         {"slug": "sensory-play-for-infants", "title": "Sparking Discovery: Sensory Play Activities for Infants", "cat": "Education", "desc": "How to engage your baby's senses through safe, fun play. Discover the benefits..."},
         {"slug": "daycare-center-vs-residential-care", "title": "Small vs. Big: Daycare Centers vs. Residential Care", "cat": "Parent Guides", "desc": "Which is right for your child? Comparing the pros and cons of large centers vs. residential..."},
-        {"slug": "west-palmdale-childcare-resources", "title": "Navigating Palmdale: Local Childcare Resources for Parents", "cat": "Locality Anchor", "desc": "A guide to local parenting resources, parks, and childcare support in West Palmdale..."}
+        {"slug": "west-palmdale-childcare-resources", "title": "Navigating Palmdale: Local Childcare Resources for Parents", "cat": "Locality Anchor", "desc": "A guide to local parenting resources, parks, and childcare support in West Palmdale..."},
+        {"slug": "childcare-in-anaverde", "title": "Childcare in Anaverde: Why Fairy Tale is the Local Choice", "cat": "Locality Anchor", "desc": "Looking for the best childcare near Anaverde? Discover why families in Anaverde prefer us..."},
+        {"slug": "california-residential-daycare-licensing", "title": "Safe & Regulated: CA Residential Daycare Licensing", "cat": "PAA Capture", "desc": "What are the rules for residential daycare in CA? Learn about the strict licensing..."},
+        {"slug": "infant-safety-protocols", "title": "Infant Safety: Our Sleep and Play Protocols", "cat": "Service Deep Dive", "desc": "Your baby's safety is our #1 priority. Learn about our strict infant sleep and play..."},
+        {"slug": "inside-fairy-tale-preschool", "title": "A Day in the Life: Inside the Fairy Tale Preschool Program", "cat": "Project Spotlight", "desc": "Curious what your child does all day? Take a look inside our magical preschool curriculum..."},
+        {"slug": "palmdale-parenting-guide-2026", "title": "The Ultimate 2026 Palmdale Parenting Resource Guide", "cat": "Cornerstone Pillar", "desc": "Everything Palmdale parents need to know in 2026. From the best parks to local support..."},
+        {"slug": "handling-daycare-separation-anxiety", "title": "Goodbye with a Smile: Handling Daycare Separation Anxiety", "cat": "Pro Tip", "desc": "Drop-offs can be hard. Learn expert tips for managing separation anxiety..."},
+        {"slug": "childcare-nutrition-meal-plans", "title": "Nutrition & Magic: Our Storybook-Themed Meal Plans", "cat": "Service Deep Dive", "desc": "Healthy eating made fun! Learn about our nutritious, fresh-prepared meals..."},
+        {"slug": "after-school-programs-east-palmdale", "title": "Beyond Daycare: After-School Programs in East Palmdale", "cat": "Locality Anchor", "desc": "Searching for engaging after-school care in East Palmdale? See why our program is the..."},
+        {"slug": "playground-safety-metrics", "title": "Safe at Play: Our Backyard Playground Safety Metrics", "cat": "PAA Capture", "desc": "Is the playground safe? Learn about the professional-grade safety standards we maintain..."},
+        {"slug": "our-storybook-reading-nook", "title": "Magic in Every Page: Our Storybook Reading Nook", "cat": "Project Spotlight", "desc": "Creating a lifelong love of reading. Take a tour of our cozy, themed reading area..."}
     ]
 
     cards_html = ""
