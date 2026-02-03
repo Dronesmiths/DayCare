@@ -33,7 +33,17 @@ def update_blog_hub():
         {"slug": "childcare-nutrition-meal-plans", "title": "Nutrition & Magic: Our Storybook-Themed Meal Plans", "cat": "Service Deep Dive", "desc": "Healthy eating made fun! Learn about our nutritious, fresh-prepared meals..."},
         {"slug": "after-school-programs-east-palmdale", "title": "Beyond Daycare: After-School Programs in East Palmdale", "cat": "Locality Anchor", "desc": "Searching for engaging after-school care in East Palmdale? See why our program is the..."},
         {"slug": "playground-safety-metrics", "title": "Safe at Play: Our Backyard Playground Safety Metrics", "cat": "PAA Capture", "desc": "Is the playground safe? Learn about the professional-grade safety standards we maintain..."},
-        {"slug": "our-storybook-reading-nook", "title": "Magic in Every Page: Our Storybook Reading Nook", "cat": "Project Spotlight", "desc": "Creating a lifelong love of reading. Take a tour of our cozy, themed reading area..."}
+        {"slug": "our-storybook-reading-nook", "title": "Magic in Every Page: Our Storybook Reading Nook", "cat": "Project Spotlight", "desc": "Creating a lifelong love of reading. Take a tour of our cozy, themed reading area..."},
+        {"slug": "childcare-options-quartz-hill", "title": "Childcare Options in Quartz Hill: Finding the Best Fit", "cat": "Locality Anchor", "desc": "Exploring childcare and preschool options in the Quartz Hill community..."},
+        {"slug": "average-cost-residential-daycare-palmdale", "title": "What is the Average Cost of Residential Daycare in Palmdale?", "cat": "PAA Capture", "desc": "Understanding childcare costs in the Antelope Valley. A guide to residential daycare pricing..."},
+        {"slug": "socialization-at-daycare-making-friends", "title": "Socialization at Daycare: How We Help Kids Make Friends", "cat": "Service Deep Dive", "desc": "Learn how our small group setting fosters deep social bonds..."},
+        {"slug": "art-magic-creative-discovery-station", "title": "Art & Magic: Our Creative Discovery Station", "cat": "Project Spotlight", "desc": "Take a look at our dedicated art and creativity area where imaginations run wild..."},
+        {"slug": "2026-guide-childcare-financial-assistance-ca", "title": "The 2026 Guide to Childcare Financial Assistance in California", "cat": "Cornerstone Pillar", "desc": "A comprehensive guide to subsidies, vouchers, and financial aid programs for 2026..."},
+        {"slug": "transitioning-crib-to-cot-daycare-naps", "title": "Transitioning from Crib to Cot: How We Handle Naps", "cat": "Pro Tip", "desc": "Moving to a nap cot is a big milestone! Learn how we make this transition smooth..."},
+        {"slug": "safe-exploration-sensory-garden-design", "title": "Safe Exploration: Our Sensory Garden Design", "cat": "Service Deep Dive", "desc": "Discover how our outdoor sensory garden helps children learn about nature..."},
+        {"slug": "weekend-fun-palmdale-families-top-picks", "title": "Weekend Fun for Palmdale Families: Our Top Picks", "cat": "Locality Anchor", "desc": "Looking for family-friendly activities in Palmdale? Our favorite local spots..."},
+        {"slug": "what-to-pack-first-day-daycare", "title": "What Should I Pack for My Child's First Day of Daycare?", "cat": "PAA Capture", "desc": "A handy checklist for parents preparing for their child's exciting first day..."},
+        {"slug": "music-movement-daily-dance-circle", "title": "Music & Movement: Our Daily Dance Circle", "cat": "Project Spotlight", "desc": "From nursery rhymes to rhythmic play, see how music and movement spark joy..."}
     ]
 
     cards_html = ""
