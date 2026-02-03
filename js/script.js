@@ -1,6 +1,6 @@
-// Mobile Appliance Repair Service - Custom Interactions
+// Fairy Tale Child Care - Custom Interactions
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Mobile Appliance Repair Service site loaded');
+    console.log('Fairy Tale Child Care site loaded');
 
     // 1. Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

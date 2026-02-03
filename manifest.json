@@ -1,10 +1,10 @@
 {
-    "name": "Mobile Appliance Repair Service",
-    "short_name": "Mobile Repair",
+    "name": "Fairy Tale Child Care",
+    "short_name": "Fairy Tale",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#1F6AE1",
+    "background_color": "#FFFDF7",
+    "theme_color": "#FCD85D",
     "icons": [
         {
             "src": "/images/favicon.ico",
