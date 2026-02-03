@@ -18,12 +18,10 @@ brand = config.get("brand", {})
 BUSINESS_NAME = client.get("name", "Fairy Tale Child Care")
 DOMAIN = client.get("domain", "fairytalechildcare.com")
 PHONE = client.get("phone", "661-XXX-XXXX")
-CLEAN_PHONE = "".join(filter(str.isdigit, PHONE))
 PRIMARY_COLOR = brand.get("primary_color", "#FCD85D")
 SECONDARY_COLOR = brand.get("secondary_color", "#F28FB5")
 ACCENT_BLUE = brand.get("accent_color", "#91D8E4")
 
-# Using a raw string for the template and avoiding f-string to manage braces more easily
 blog_template = """<!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +43,7 @@ blog_template = """<!DOCTYPE html>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/css/styles.css?v=1.0">
+    <link rel="stylesheet" href="/css/styles.css?v=2.1">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <style>
         :root {{
@@ -61,6 +59,7 @@ blog_template = """<!DOCTYPE html>
         .blog-body p {{ margin-bottom: 20px; line-height: 1.8; }}
         .blog-body ul {{ margin-bottom: 25px; padding-left: 20px; }}
         .blog-body li {{ margin-bottom: 10px; }}
+        .c {{ max-width: 1200px; margin: 0 auto; padding: 0 20px; }}
     </style>
 </head>
 
@@ -68,7 +67,7 @@ blog_template = """<!DOCTYPE html>
 
     <!-- Header -->
     <header style="padding: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <div class="c" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display:flex; justify-content:space-between; align-items:center;">
+        <div class="c" style="display:flex; justify-content:space-between; align-items:center;">
             <a href="/" class="logo" style="font-family: var(--f-h); font-size: 24px; text-decoration:none; color:var(--d);">Fairy Tale <span style="color:var(--p-pink);">Child Care</span></a>
             <nav>
                 <ul style="display:flex; list-style:none; gap:25px;">
@@ -105,7 +104,7 @@ blog_template = """<!DOCTYPE html>
                 </div>
 
                 <div style="font-size: 0.9rem; color: #666; margin-top: 50px;">
-                    <p><a href="/" style="color: var(--d); font-weight: 600; text-decoration: none;">&larr; Back to Home</a></p>
+                    <p><a href="/blog/" style="color: var(--d); font-weight: 600; text-decoration: none;">&larr; Back to Blog Index</a></p>
                 </div>
             </div>
         </div>
@@ -129,7 +128,6 @@ articles = [
         "category": "Parent Guides",
         "description": "Finding the perfect daycare in Palmdale can be overwhelming. Learn what to look for in a residential childcare setting for your family's peace of mind.",
         "lead_text": "Your child's first years are their most important. Choosing a childcare provider is one of the biggest decisions you'll make as a parent in the Antelope Valley.",
-        "tags": "Palmdale, Daycare, Parent Tips",
         "content_body": '''
             <h2>What Makes Residential Childcare Special?</h2>
             <p>Unlike large commercial centers, residential childcare offers a warm, home-like environment that helps children transition from their own home more smoothly. At Fairy Tale Child Care, we provide that intimate setting combined with a professional curriculum.</p>
@@ -147,7 +145,6 @@ articles = [
         "category": "Education",
         "description": "Why small ratios matter. Discover why residential daycare settings provide superior social and emotional growth for toddlers.",
         "lead_text": "In a smaller group, your child isn't just a number. They are part of a little family where their unique personality can shine.",
-        "tags": "Toddler Care, Child Development, Education",
         "content_body": '''
             <h2>Personalized Attention</h2>
             <p>With a smaller child-to-teacher ratio, we can tailor activities to each child's interest and stage of development. Whether they are exploring sensory play or learning their first words, we are right there with them.</p>
@@ -163,13 +160,125 @@ articles = [
         "category": "Facility News",
         "description": "We've upgraded! Take a look at our new professional-grade backyard playground designed for safe, magical fun in Palmdale.",
         "lead_text": "We believe that outdoor play is where the real magic happens. That's why we've invested in a premium playground for our little adventurers.",
-        "tags": "Playground, Outdoor Play, Palmdale",
         "content_body": '''
             <h2>Safe, High-Quality Fun</h2>
             <p>Our new setup features professional-grade swings, dual slides, and a magical castle theme that inspires hours of imaginative play. We've also installed safety-first surfacing to ensure soft landings.</p>
             <h2>The Importance of Active Play</h2>
             <p>Running, climbing, and swinging help children build motor skills, coordination, and confidence. Our backyard provides the perfect controlled environment for these essential childhood experiences.</p>
             <p>Come see the new playground during our next open house!</p>
+        '''
+    },
+    {
+        "slug": "when-is-child-ready-for-preschool",
+        "title": "Is Your Child Ready for Preschool? 5 Signs to Watch For",
+        "category": "Parent Guides",
+        "description": "How do you know when it's time for Pre-K? Discover 5 indicators that your child is ready for the exciting world of preschool.",
+        "lead_text": "The transition from toddlerhood to preschool is a major milestone. While every child is different, these five signs suggest they might be ready for the next chapter.",
+        "content_body": '''
+            <h2>1. Growing Curiosity</h2>
+            <p>If your child is constantly asking "why" and showing a keen interest in learning new things, they are likely ready for a more structured educational environment.</p>
+            <h2>2. Basic Independence</h2>
+            <p>Can they handle small tasks alone? Preschool requires a certain level of independence, from putting on shoes to using the restroom with minimal help.</p>
+            <h2>3. Interest in Peers</h2>
+            <p>Does your child actively seek out other children to play with? This social drive is a key component of the preschool experience.</p>
+            <h2>4. Ability to Follow Simple Directions</h2>
+            <p>Preschool involves following a routine and listening to instructions. If they can complete two-step directions at home, they are on the right track.</p>
+            <h2>5. Stamina for a Full Day</h2>
+            <p>Preschool can be tiring! Ensure your child has the energy and emotional resilience to handle a day filled with learning and play.</p>
+        '''
+    },
+    {
+        "slug": "transitioning-to-after-school-care",
+        "title": "Smooth Sailing: Transitioning to After-School Care",
+        "category": "Education",
+        "description": "Make the move to after-school care easy for your child. Tips for Palmdale parents on choosing and starting an after-school program.",
+        "lead_text": "The end of the school day doesn't have to be stressful. After-school care provides a safe, productive space for children while parents are at work.",
+        "content_body": '''
+            <h2>Creating a Consistent Routine</h2>
+            <p>Children thrive on predictability. Ensure the after-school program has a clear schedule that allows for homework time, active play, and relaxation.</p>
+            <h2>Communication is Key</h2>
+            <p>Stay in close contact with the providers. Share updates about your child's day at school and any specific needs they might have in the afternoon.</p>
+            <h2>A Safe Space to Unwind</h2>
+            <p>After a full day of academics, children need a place to let off steam. Our Palmdale facility offers the perfect mix of homework support and outdoor playground fun.</p>
+        '''
+    },
+    {
+        "slug": "consistent-routine-for-toddlers",
+        "title": "The Power of Patterns: Creating a Routine for Toddlers",
+        "category": "Parent Guides",
+        "description": "Why toddlers need routine and how to build one that works for your family. Practical tips for Palmdale parents.",
+        "lead_text": "For a toddler, the world is a big, unpredictable place. A consistent routine provides the safety and structure they need to flourish.",
+        "content_body": '''
+            <h2>Why Routines Matter</h2>
+            <p>Routines help toddlers understand what to expect next, reducing anxiety and power struggles. It also fosters a sense of security and belonging.</p>
+            <h2>Building Your Daily Rhythm</h2>
+            <ul>
+                <li><strong>Morning Magic:</strong> Start the day with a predictable sequence of rituals.</li>
+                <li><strong>Consistent Mealtimes:</strong> Eating at the same time helps regulate their energy and mood.</li>
+                <li><strong>Naptime Rituals:</strong> A calm transition to rest is essential for growth.</li>
+                <li><strong>Evening Wind-down:</strong> Prepare for sleep with quiet activities like reading or gentle play.</li>
+            </ul>
+        '''
+    },
+    {
+        "slug": "sensory-play-for-infants",
+        "title": "Sparking Discovery: Sensory Play Activities for Infants",
+        "category": "Education",
+        "description": "How to engage your baby's senses through safe, fun play. Discover the benefits of sensory exploration for infant development.",
+        "lead_text": "From the moment they are born, infants are learning about the world through their senses. Sensory play is vital for brain development and discovery.",
+        "content_body": '''
+            <h2>Safe Exploration</h2>
+            <p>Using different textures, sounds, and colors helps infants build neural pathways. At Fairy Tale Child Care, we use age-appropriate toys and materials to stimulate their curiosity.</p>
+            <h2>Try These at Home:</h2>
+            <ul>
+                <li><strong>Texture Time:</strong> Let them touch soft fabrics, smooth wood, or safe crinkly paper.</li>
+                <li><strong>Nature Sounds:</strong> Take them outside to hear the birds, wind, and rustling leaves.</li>
+                <li><strong>High Contrast Visuals:</strong> Infants love bold black and white patterns or bright primary colors.</li>
+            </ul>
+        '''
+    },
+    {
+        "slug": "daycare-center-vs-residential-care",
+        "title": "Small vs. Big: Daycare Centers vs. Residential Care",
+        "category": "Parent Guides",
+        "description": "Which is right for your child? Comparing the pros and cons of large daycare centers versus residential childcare settings.",
+        "lead_text": "Choosing a childcare setting is a personal decision. Understanding the differences can help you find the best fit for your family's needs.",
+        "content_body": '''
+            <h2>Residential Care: The Home-Like Feel</h2>
+            <p>Residential settings offer smaller groups, a consistent caregiver, and a nurturing atmosphere that mimics a family dynamic. This is often ideal for infants and toddlers who need more personalized attention.</p>
+            <h2>Daycare Centers: The Group Experience</h2>
+            <p>Large centers often have more diverse resources and larger peer groups, which can be beneficial for older children preparing for public school environments.</p>
+            <h2>Why We Believe in the Residential Model</h2>
+            <p>At Fairy Tale Child Care, we combine the intimacy of a home with a professional curriculum and a world-class playground, giving parents the best of both worlds.</p>
+        '''
+    },
+    {
+        "slug": "west-palmdale-childcare-resources",
+        "title": "Navigating Palmdale: Local Childcare Resources for Parents",
+        "category": "Locality Anchor",
+        "description": "A guide to local parenting resources, parks, and childcare support in West Palmdale and the Antelope Valley.",
+        "lead_text": "Living in Palmdale means being part of a vibrant, family-oriented community. Here is your guide to local resources for young families.",
+        "content_body": '''
+            <h2>Parks & Play in Palmdale</h2>
+            <p>We are lucky to have beautiful spaces like Marie Kerr Park and Pelona Vista Park nearby. These are great spots for weekend family outings!</p>
+            <h2>Community Support</h2>
+            <p>The Antelope Valley offers various resources for parents, from local library reading programs to community health clinics and parenting workshops.</p>
+            <p><strong>Fairy Tale Child Care</strong> is proud to be a part of the West Palmdale neighborhood, providing a safe haven for our local children.</p>
+        '''
+    },
+    {
+        "slug": "why-palmdale-families-trust-us",
+        "title": "Trust & Magic: Why Palmdale Families Choose Us",
+        "category": "Locality Anchor",
+        "description": "Discover why Fairy Tale Child Care is the most trusted residential childcare in Palmdale and the Antelope Valley.",
+        "lead_text": "Trust is the foundation of everything we do. Parents in Palmdale choose us because they know their children are in a safe, loving, and magical environment.",
+        "content_body": '''
+            <h2>A Commitment to Excellence</h2>
+            <p>We go above and beyond to provide a high-quality experience for both children and parents. From our transparent communication to our carefully curated curriculum, every detail matters.</p>
+            <h2>Testimonials from Local Parents</h2>
+            <p>\"Finding Fairy Tale Child Care was a game-changer for our family. Our daughter loves the playground and has learned so much in such a short time!\" - Sarah M., West Palmdale</p>
+            <h2>Safety & Licensing</h2>
+            <p>We are fully licensed and follow strict safety protocols. Our home-based setting is clean, secure, and designed specifically for early childhood development.</p>
         '''
     }
 ]
@@ -191,7 +300,6 @@ def generate_articles():
             category=article['category'],
             lead_text=article['lead_text'],
             content_body=article['content_body'],
-            tags=article['tags'],
             business_name=BUSINESS_NAME,
             domain=DOMAIN,
             primary_color=PRIMARY_COLOR,
