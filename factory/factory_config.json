@@ -1,0 +1,35 @@
+{
+    "client": {
+        "name": "Fairy Tale Child Care",
+        "phone": "[TBD]",
+        "email": "[TBD]",
+        "address_city": "Palmdale",
+        "address_state": "CA",
+        "domain": "d10n3vuagkaa62.cloudfront.net"
+    },
+    "brand": {
+        "primary_color": "#FCD85D",
+        "secondary_color": "#F28FB5",
+        "accent_color": "#91D8E4",
+        "font_heading": "'Bubblegum Sans', 'Quicksand', cursive",
+        "font_body": "'Quicksand', sans-serif"
+    },
+    "aws": {
+        "bucket_name": "fairytale-childcare-palmdale",
+        "region": "us-east-1",
+        "cloudfront_id": "EUU0HJFXZUE4L",
+        "profile": "mediusa"
+    },
+    "seo": {
+        "primary_keywords": [
+            "Child Care Palmdale",
+            "Daycare Lancaster",
+            "Residential Daycare"
+        ],
+        "service_area": [
+            "Palmdale",
+            "Lancaster",
+            "Antelope Valley"
+        ]
+    }
+}

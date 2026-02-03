@@ -1,0 +1,39 @@
+{
+    "CallerReference": "fairytale-childcare-palmdale-ref-1",
+    "Aliases": {
+        "Quantity": 0
+    },
+    "DefaultRootObject": "index.html",
+    "Origins": {
+        "Quantity": 1,
+        "Items": [
+            {
+                "Id": "S3Origin",
+                "DomainName": "fairytale-childcare-palmdale.s3.amazonaws.com",
+                "S3OriginConfig": {
+                    "OriginAccessIdentity": ""
+                }
+            }
+        ]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "S3Origin",
+        "ForwardedValues": {
+            "QueryString": false,
+            "Cookies": {
+                "Forward": "none"
+            }
+        },
+        "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+        },
+        "ViewerProtocolPolicy": "allow-all",
+        "MinTTL": 0
+    },
+    "CacheBehaviors": {
+        "Quantity": 0
+    },
+    "Comment": "Fairy Tale Child Care Production",
+    "Enabled": true
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairy Tale Child Care | 100% Reliable in Antelope Valley</title>
+    <meta name="description"
+        content="Fast, reputable mobile appliance repair in Palmdale, Lancaster, and Antelope Valley. Refrigerator, washer, dryer, and oven repair. Call 661-XXX-XXXX.">
+    <link rel="canonical" href="https://d3jg5wepg4zxcs.cloudfront.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://d3jg5wepg4zxcs.cloudfront.net/">
+    <meta property="og:title" content="Fairy Tale Child Care | Antelope Valley">
+    <meta property="og:description"
+        content="Expert repair for all major brands. Same-day service available. Call 661-XXX-XXXX.">
+    <meta property="og:image" content="https://d3jg5wepg4zxcs.cloudfront.net/images/hero-home.webp">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --p: #FCD85D;
+            /* Primary Yellow */
+            --p-pink: #F28FB5;
+            --p-blue: #91D8E4;
+            --p-orange: #FFB84C;
+            --d: #00457C;
+            /* Dark Blue from logo */
+            --t: #2D3436;
+            --l: #FFFDF7;
+            --w: #ffffff;
+            --s: 'Quicksand', sans-serif;
+            --f-h: 'Bubblegum Sans', cursive;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--s);
+            color: var(--t);
+            line-height: 1.6;
+            background: var(--w);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .c {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--w);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        header .c {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--d);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--p-pink);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--t);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a.a {
+            color: var(--p);
+        }
+
+        .b {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+        }
+
+        .b-p {
+            background: var(--p);
+            color: var(--w);
+            box-shadow: 0 4px 15px rgba(31, 106, 225, 0.3);
+        }
+
+        .b-p:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(31, 106, 225, 0.4);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/hero-home.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--w);
+            padding: 140px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: var(--f-h);
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 35px;
+        }
+
+        .feats {
+            padding: 100px 0;
+            background: var(--l);
+        }
+
+        .st {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .st h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--d);
+        }
+
+        .g4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--w);
+            padding: 50px 30px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin: 25px 0 12px;
+            font-size: 1.4rem;
+            color: var(--d);
+        }
+
+        .card p {
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            fill: var(--p);
+        }
+
+        .s-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 100px 0;
+        }
+
+        .s-card {
+            padding: 45px 35px;
+            border-radius: 35px;
+            background: var(--w);
+            border: 1px solid #eee;
+            text-align: left;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .s-card:hover {
+            border-color: var(--p);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+            transform: translateY(-5px);
+        }
+
+        .s-card h3 {
+            font-size: 1.75rem;
+            color: var(--d);
+            margin-bottom: 15px;
+        }
+
+        .s-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .s-card li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .s-card li::before {
+            content: '\2713';
+            color: var(--p);
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #0a0a0a;
+            color: var(--w);
+            padding: 80px 0 40px;
+        }
+
+        .f-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .f-bot {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            opacity: 0.6;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .menu-t {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width:768px) {
+            .hero {
+                padding: 100px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .g4,
+            .s-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .menu-t {
+                display: block;
+            }
+
+            .m-hide {
+                display: none;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Fairy Tale Child Care",
+      "image": "https://d3jg5wepg4zxcs.cloudfront.net/images/hero-home.webp",
+      "url": "https://d3jg5wepg4zxcs.cloudfront.net/",
+      "telephone": "+16614984444",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palmdale",
+        "addressRegion": "CA",
+        "postalCode": "93551",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.5794,
+        "longitude": -118.1165
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="c">
+            <a href="/" class="logo" aria-label="Fairy Tale Child Care Home">Fairy Tale <span>Child Care</span></a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="/" class="a">Home</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions m-hide">
+                <a href="tel:6614984444" class="b b-p" aria-label="Call for Repair">661-XXX-XXXX</a>
+            </div>
+            <button class="menu-t" aria-label="Toggle Menu">
+                <svg viewBox="0 0 448 512" width="24" height="24" fill="#004488">
+                    <path
+                        d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero" aria-label="Hero Section">
+            <div class="c">
+                <h1>Happy Childhood Memories Start Here</h1>
+                <p>Palmdale's magical residential childcare. A safe, nurturing, and fun environment where your little
+                    ones can grow and play in our beautiful backyard playground.</p>
+                <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+                    <a href="tel:661-XXX-XXXX" class="b b-p" style="color:#00457C;">Call Us Today</a>
+                    <a href="/about/" class="b" style="border:2px solid #fff; color:#fff;">Our Story</a>
+                </div>
+            </div>
+        </section>
+        <section class="feats">
+            <div class="c">
+                <div class="st">
+                    <h2>Why Choose Us?</h2>
+                    <p>We provide premium service with local expertise.</p>
+                </div>
+                <div class="g4">
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p);">
+                            <path
+                                d="M256 160c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 160c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z" />
+                            <path
+                                d="M448 0H64C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM64 48h384c8.8 0 16 7.2 16 16v30.1c-16.4-9.3-35.5-14.1-55.5-14.1-62.1 0-112.5 50.4-112.5 112.5S346.4 305 408.5 305c20 0 39.1-4.8 55.5-14.1V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16zm344.5 225c-44.4 0-80.5-36.1-80.5-80.5s36.1-80.5 80.5-80.5 80.5 36.1 80.5 80.5-36.1 80.5-80.5 80.5z" />
+                        </svg>
+                        <h3>Magical Learning</h3>
+                        <p>A storybook-themed environment that sparks imagination and curiosity.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-blue);">
+                            <path
+                                d="M256 64c53 0 96 43 96 96s-43 96-96 96-96-43-96-96 43-96 96-96m0 224c106 0 192 86 192 192H64c0-106 86-192 192-192" />
+                        </svg>
+                        <h3>Safe & Secure</h3>
+                        <p>Fully licensed facility with small groups for personalized, safe care.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-pink);">
+                            <path
+                                d="M464 256h-80v-48c0-26.5-21.5-48-48-48s-48 21.5-48 48v48h-64v-48c0-26.5-21.5-48-48-48s-48 21.5-48 48v48h-80c-26.5 0-48 21.5-48 48v160c0 26.5 21.5 48 48 48h384c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+                        </svg>
+                        <h3>Premium Playground</h3>
+                        <p>Professional-grade swings and slides in our beautiful spacious backyard.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-orange);">
+                            <path d="M256 0L0 256h96v256h320V256h96z" />
+                        </svg>
+                        <h3>Nutritious Meals</h3>
+                        <p>Balanced, home-cooked healthy meals prepared fresh every daily.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="c">
+            <div class="s-grid">
+                <div class="s-card">
+                    <h3>Infant & Toddler</h3>
+                    <ul>
+                        <li>Nurturing care (0-2y)</li>
+                        <li>Sensory play</li>
+                        <li>Safe sleep environment</li>
+                    </ul>
+                    <a href="/services/toddler-care/" aria-label="Learn about toddler care">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <h3>Pre-K Learning</h3>
+                    <ul>
+                        <li>Preschool curriculum</li>
+                        <li>Social development</li>
+                        <li>Creative arts & crafts</li>
+                    </ul>
+                    <a href="/services/preschool/" aria-label="Learn about pre-k programs">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <h3>After-School</h3>
+                    <ul>
+                        <li>Homework assistance</li>
+                        <li>Outdoor playground fun</li>
+                        <li>Healthy afternoon snacks</li>
+                    </ul>
+                    <a href="/services/after-school/" aria-label="Learn about after school care">Explore Program
+                        &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="c">
+            <div class="f-grid">
+                <div>
+                    <h3>Fairy Tale Child Care</h3>
+                    <p style="opacity:0.7; margin-top:15px; max-width:300px;">Palmdale's premier residential childcare,
+                        providing a magical and safe environment for children to learn, grow, and play.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom:20px;">Contact Us</h4>
+                    <p style="opacity:0.8;">Call: <a href="tel:6614984444"
+                            style="color:#fff; font-weight:700;">661-XXX-XXXX</a></p>
+                    <p style="opacity:0.8; margin-top:5px;">Palmdale • Lancaster • Quartz Hill</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom:20px;">Areas Served</h4>
+                    <p style="opacity:0.7; font-size:0.9rem; line-height:1.4;">West Lancaster, East Palmdale, Quartz
+                        Hill, Rosamond, Littlerock, Antelope Acres.</p>
+                </div>
+            </div>
+            <div class="f-bot">
+                <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p>
+                <div style="margin-top:15px;"><a href="/privacy/"
+                        style="color:#fff; text-decoration:none; margin-right:20px;">Privacy</a> <a href="/terms/"
+                        style="color:#fff; text-decoration:none;">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const t = document.querySelector('.menu-t');
+            const n = document.querySelector('nav');
+            if (t && n) {
+                t.addEventListener('click', () => {
+                    const isV = n.style.display === 'block';
+                    n.style.display = isV ? 'none' : 'block';
+                    n.style.position = 'absolute';
+                    n.style.top = '100%';
+                    n.style.left = '0';
+                    n.style.width = '100%';
+                    n.style.background = '#fff';
+                    n.style.padding = '20px';
+                    n.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                    if (!isV) {
+                        n.querySelector('ul').style.flexDirection = 'column';
+                        n.querySelector('ul').style.gap = '15px';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
