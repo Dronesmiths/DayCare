@@ -19,15 +19,16 @@ def process_file(path):
     # Also for OG image if it was absolute
     new_content = re.sub(rf'content="{domain}/images/', 'content="/images/', new_content)
     
-    # 3. Nav Links: Use root-relative / for better local testing
-    new_content = re.sub(rf'href="{domain}/"', 'href="/"', new_content)
-    new_content = re.sub(rf'href="{domain}/services/"', 'href="/services/"', new_content)
-    new_content = re.sub(rf'href="{domain}/about/"', 'href="/about/"', new_content)
-    new_content = re.sub(rf'href="{domain}/contact/"', 'href="/contact/"', new_content)
-    new_content = re.sub(rf'href="{domain}/blog/"', 'href="/blog/"', new_content)
+    # 3. Nav Links: Append index.html to directory paths for S3/CloudFront compatibility
+    # This transforms /services/ to /services/index.html
+    new_content = re.sub(r'href="/([^"]+)/"', r'href="/\1/index.html"', new_content)
+    
+    # Special case for Home link if it's just "/"
+    # Usually "/" works as Default Root Object, but let's be safe
+    # Actually "/" is fine for most CloudFront configs at the root.
     
     if content != new_content:
-        print(f"Updating {path} to root-relative")
+        print(f"Updating {path} to file-explicit paths")
         with open(path, 'w', encoding='utf-8') as f:
             f.write(new_content)
 
