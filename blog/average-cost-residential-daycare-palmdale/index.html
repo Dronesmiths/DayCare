@@ -21,36 +21,7 @@
     
     <link rel="stylesheet" href="/css/styles.css?v=2.4">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <style>
-        :root {
-            --p: #FFD93D;
-            --p-pink: #FF6B6B;
-            --p-blue: #2E91D3;
-            --d: #00457C;
-            --t: #2D3436;
-            --s: 'Quicksand', sans-serif;
-            --f-h: 'Bubblegum Sans', cursive;
-        }
-        .blog-body h2 { font-family: var(--f-h); color: var(--d); margin: 30px 0 15px; font-size: 2rem; }
-        .blog-body p { margin-bottom: 20px; line-height: 1.8; }
-        .blog-body ul { margin-bottom: 25px; padding-left: 20px; }
-        .blog-body li { margin-bottom: 10px; }
-        .c { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     
-        .logo { font-family: var(--f-h); font-weight: 400; }
-        .logo .l-1 { color: #2E91D3; } /* F */
-        .logo .l-2 { color: #FF9F43; } /* a */
-        .logo .l-3 { color: #8BC34A; } /* i */
-        .logo .l-4 { color: #FFD93D; } /* r */
-        .logo .l-5 { color: #FF6B6B; } /* y */
-        .logo .l-space { margin-right: 5px; }
-        .logo .l-6 { color: #FF9F43; } /* T */
-        .logo .l-7 { color: #2E91D3; } /* a */
-        .logo .l-8 { color: #FF6B6B; } /* l */
-        .logo .l-9 { color: #FFD93D; } /* e */
-        .logo span.cc { color: var(--p-pink); margin-left: 8px; font-weight: 700; font-family: var(--s); font-size: 0.9em; }
-
-    </style>
     <link rel="canonical" href="https://fairytalechildcare.com/blog/average-cost-residential-daycare-palmdale/" />
 
     <script src="/js/script.js" defer></script>
@@ -59,25 +30,40 @@
 <body>
 
     <!-- Header -->
-    <header style="padding: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <div class="c" style="display:flex; justify-content:space-between; align-items:center;">
-            <a href="/index.html" class="logo" style="font-family: var(--f-h); font-size: 24px; text-decoration:none; color:var(--d);">Fairy Tale <span style="color:var(--p-pink);">Child Care</span></a>
-            <nav>
-                <ul style="display:flex; list-style:none; gap:25px;">
+            <header>
+        <div class="c">
+            <a href="/index.html" class="logo" aria-label="Fairy Tale Child Care Home">
+                <span class="l-1">F</span><span class="l-2">a</span><span class="l-3">i</span><span
+                    class="l-4">r</span><span class="l-5">y</span><span class="l-space"></span><span
+                    class="l-6">T</span><span class="l-7">a</span><span class="l-8">l</span><span class="l-9">e</span>
+                <span class="cc">Child Care</span>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/services/index.html">Services</a></li>
-                    <li><a href="/about/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">About</a></li>
-                    <li><a href="/contact/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">Contact</a></li>
+                    <li><a href="/about/index.html">About</a></li>
+                    <li><a href="/blog/index.html" class="a">Blog</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-actions m-hide">
+                <a href="tel:8189664875" class="b b-p" aria-label="Call Fairy Tale Child Care">(818) 966-4875</a>
+            </div>
+            <button class="menu-t" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" style="color: var(--d);">
+                    <line x1="4" y1="8" x2="20" y2="8"></line>
+                    <line x1="4" y1="16" x2="20" y2="16"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
     <!-- Page Hero -->
-    <section class="page-hero" style="background: linear-gradient(#F28FB5, #FCD85D); padding: 80px 0; text-align: center; color: white;">
+    <section class="page-hero">
         <div class="c">
             <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">PAA Capture</span>
-            <h1 style="font-family: var(--f-h); font-size: clamp(2rem, 5vw, 3.5rem); margin-top: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 0 20px;">What is the Average Cost of Residential Daycare in Palmdale?</h1>
+            <h1>What is the Average Cost of Residential Daycare in Palmdale?</h1>
         </div>
     </section>
 
@@ -114,10 +100,48 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background: #2D3436; color: white; padding: 60px 0; text-align: center;">
+                        <footer class="footer">
         <div class="c">
-            <h4 style="font-family: var(--f-h); font-size: 1.5rem; margin-bottom: 10px;">Fairy Tale Child Care</h4>
-            <p>© 2026 Fairy Tale Child Care. All rights reserved.</p>
+            <div class="f-grid">
+                <div>
+                    <h3 style="color: var(--p);">Fairy Tale Child Care</h3>
+                    <p style="opacity: 0.9; margin-top: 5px; max-width: 320px;">Palmdale's premier residential childcare, providing a magical and safe environment for children to learn, grow, and play.</p>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p style="margin-bottom: 8px;">Call: <a href="tel:8189664875" class="f-link-hover" style="color: var(--p); text-decoration: none; font-weight: 700; transition: 0.3s;">(818) 966-4875</a></p>
+                    <p style="opacity: 0.9;">Palmdale • Lancaster • Quartz Hill</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/profile.php?id=100093238903254" target="_blank" class="f-link-hover" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; opacity: 0.9; transition: 0.3s;">
+                        <svg viewBox="0 0 320 512" width="20" height="20" fill="currentColor">
+                            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                        </svg>
+                        Facebook Official Page
+                    </a>
+                </div>
+            </div>
+
+            <div class="f-bot">
+                <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p>
+                <p style="opacity: 0.9; font-size: 0.85rem; margin-top: 8px;">
+                    Verified License: <a href="https://www.ccld.dss.ca.gov/carefacilitysearch/FacDetail/197701048" target="_blank" rel="noopener noreferrer" style="color: var(--p); text-decoration: underline; font-weight: 600;">#197701048</a>
+                </p>
+                <div style="margin-top: 15px;">
+                    <a href="/privacy/index.html" class="f-link-hover" style="color: #fff; text-decoration: none; margin-right: 15px; font-size: 0.9rem;">Privacy Policy</a>
+                    <a href="/terms/index.html" class="f-link-hover" style="color: #fff; text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
+                </div>
+            </div>
+
+            <div class="aw-footer-neighborhoods">
+                <h4 style="font-size: 1.1rem; color: var(--p); margin-bottom: 12px;">Neighborhoods Served</h4>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.7; font-weight: 500;">
+                    West Palmdale • East Palmdale • Rancho Vista • Anaverde • Quartz Hill • White Fence Farms •
+                    Desert View Highlands • Joshua Ranch • Sun Village • Littlerock • Pearblossom •
+                    Anaverde Hills • Palmdale 93551 • Palmdale 93550 • Palmdale 93552
+                </p>
+            </div>
         </div>
     </footer>
 </body>

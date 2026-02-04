@@ -25,355 +25,207 @@
 
     <link rel="stylesheet" href="/css/styles.css?v=2.4">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <style>
-        :root {
-            --p: #FFD93D;
-            --p-pink: #FF6B6B;
-            --p-blue: #2E91D3;
-            --d: #00457C;
-            --t: #2D3436;
-            --l: #FFFDF7;
-            --w: #ffffff;
-            --s: 'Quicksand', sans-serif;
-            --f-h: 'Bubblegum Sans', cursive;
-        }
-
-        body {
-            font-family: var(--s);
-            color: var(--t);
-            background: var(--l);
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 60px 0;
-        }
-
-        .blog-card {
-            background: white;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .blog-card-content {
-            padding: 30px;
-            flex-grow: 1;
-        }
-
-        .blog-card-content span {
-            color: var(--p-pink);
-            font-weight: 700;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
-
-        .blog-card-content h3 {
-            font-family: var(--f-h);
-            font-size: 1.5rem;
-            color: var(--d);
-            margin: 10px 0;
-        }
-
-        .blog-card-content p {
-            color: #666;
-            line-height: 1.6;
-        }
-    
-        .logo { font-family: var(--f-h); font-weight: 400; }
-        .logo .l-1 { color: #2E91D3; } /* F */
-        .logo .l-2 { color: #FF9F43; } /* a */
-        .logo .l-3 { color: #8BC34A; } /* i */
-        .logo .l-4 { color: #FFD93D; } /* r */
-        .logo .l-5 { color: #FF6B6B; } /* y */
-        .logo .l-space { margin-right: 5px; }
-        .logo .l-6 { color: #FF9F43; } /* T */
-        .logo .l-7 { color: #2E91D3; } /* a */
-        .logo .l-8 { color: #FF6B6B; } /* l */
-        .logo .l-9 { color: #FFD93D; } /* e */
-        .logo span.cc { color: var(--p-pink); margin-left: 8px; font-weight: 700; font-family: var(--s); font-size: 0.9em; }
-
-    </style>
-
     <script src="/js/script.js" defer></script>
 </head>
 
-<body>
-
+<body style="display:flex; flex-direction:column; min-height:100vh;">
     <!-- Header -->
-    <header style="padding: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <div class="c"
-            style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display:flex; justify-content:space-between; align-items:center;">
-            <a href="/index.html" class="logo"
-                style="font-family: var(--f-h); font-size: 24px; text-decoration:none; color:var(--d);">Fairy Tale <span
-                    style="color:var(--p-pink);">Child Care</span></a>
-            <nav>
-                <ul style="display:flex; list-style:none; gap:25px;">
-                    <li><a href="/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">Home</a></li>
-                    <li><a href="/services/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">Services</a>
-                    </li>
-                    <li><a href="/about/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">About</a></li>
-                    <li><a href="/contact/index.html" style="text-decoration:none; color:var(--t); font-weight:600;">Contact</a>
-                    </li>
+    <header>
+        <div class="c">
+            <a href="/index.html" class="logo" aria-label="Fairy Tale Child Care Home">
+                <span class="l-1">F</span><span class="l-2">a</span><span class="l-3">i</span><span
+                    class="l-4">r</span><span class="l-5">y</span><span class="l-space"></span><span
+                    class="l-6">T</span><span class="l-7">a</span><span class="l-8">l</span><span class="l-9">e</span>
+                <span class="cc">Child Care</span>
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/services/index.html">Services</a></li>
+                    <li><a href="/about/index.html">About</a></li>
+                    <li><a href="/blog/index.html" class="a">Blog</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-actions m-hide">
+                <a href="tel:8189664875" class="b b-p" aria-label="Call Fairy Tale Child Care">(818) 966-4875</a>
+            </div>
+            <button class="menu-t" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none"
+                    stroke-linecap="round" style="color: var(--d);">
+                    <line x1="4" y1="8" x2="20" y2="8"></line>
+                    <line x1="4" y1="16" x2="20" y2="16"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="page-hero"
-        style="background: linear-gradient(var(--p-pink), var(--p)); padding: 80px 0; text-align: center; color: white;">
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="c">
+                <h1>The Magic Log</h1>
+                <p>Parenting tips, educational stories, and a peek inside our magical world.</p>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="sub-content">
+            <div class="c">
+                <div class="card-grid">
+                    <a href="/blog/choosing-right-childcare-palmdale/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #2E91D3; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Parent
+                                Guides</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Choosing the Right Child Care: A Parent's
+                                Guide</h3>
+                            <p>Finding the perfect daycare in Palmdale can be overwhelming. Learn what to look for and
+                                the questions you must ask during your first tour.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/why-palmdale-families-trust-us/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #FF9F43; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Locality
+                                Anchor</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Trust & Magic: Why Palmdale Families Choose
+                                Us</h3>
+                            <p>Discover why Fairy Tale Child Care is the most trusted residential childcare in Palmdale
+                                and our commitment to safety and education.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/benefits-of-residential-daycare/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #8BC34A; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Education</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">The Magic of Small Groups: Residential
+                                Benefits</h3>
+                            <p>Why small ratios matter. Discover why residential daycare settings provide superior
+                                social and emotional developmental outcomes.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/our-new-backyard-playground/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #FF6B6B; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Facility
+                                News</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Step Into the Magic: Our New Playground
+                            </h3>
+                            <p>We've upgraded! Take a look at our new professional-grade backyard playground designed
+                                for safe exploration and active outdoor play.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/when-is-child-ready-for-preschool/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #2E91D3; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Parent
+                                Guides</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Is Your Child Ready for Preschool? 5 Signs
+                            </h3>
+                            <p>How do you know when it's time for Pre-K? Discover 5 indicators that your child is ready
+                                for a more structured learning environment.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/transitioning-to-after-school-care/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #FF9F43; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Education</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Smooth Sailing: Transitioning to
+                                After-School Care</h3>
+                            <p>Make the move to after-school care easy for your child. Pro tips for Palmdale parents on
+                                balancing school and evening routines.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/consistent-routine-for-toddlers/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #8BC34A; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Parent
+                                Guides</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">The Power of Patterns: Routines for
+                                Toddlers</h3>
+                            <p>Why toddlers thrive with routine and how to build one that works for your family both at
+                                home and in our childcare program.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+
+                    <a href="/blog/sensory-play-for-infants/index.html" style="text-decoration:none;">
+                        <div class="modern-card">
+                            <span
+                                style="font-weight: 700; color: #FF6B6B; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Education</span>
+                            <h3 style="font-size: 1.8rem; margin-top: 10px;">Sparking Discovery: Sensory Play for
+                                Infants</h3>
+                            <p>How to engage your baby's senses through safe, fun play. Discover the benefits of sensory
+                                exploration in early development.</p>
+                            <span style="color: var(--d); font-weight: 700;">Read Story &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="c">
-            <span style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">The Magic
-                Log</span>
-            <h1
-                style="font-family: var(--f-h); font-size: 3.5rem; margin-top: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                Our Magic & Learning Blog</h1>
-            <p style="margin-top: 15px; font-size: 1.2rem;">Parenting tips, educational stories, and a peek inside our
-                magical world.</p>
-        </div>
-    </section>
+            <div class="f-grid">
+                <div>
+                    <h3 style="color: var(--p);">Fairy Tale Child Care</h3>
+                    <p style="opacity: 0.9; margin-top: 5px; max-width: 320px;">Palmdale's premier residential
+                        childcare, providing a magical and safe environment for children to learn, grow, and play.</p>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <p style="margin-bottom: 8px;">Call: <a href="tel:8189664875" class="f-link-hover"
+                            style="color: var(--p); text-decoration: none; font-weight: 700; transition: 0.3s;">(818)
+                            966-4875</a></p>
+                    <p style="opacity: 0.9;">Palmdale • Lancaster • Quartz Hill</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/profile.php?id=100093238903254" target="_blank"
+                        class="f-link-hover"
+                        style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; opacity: 0.9; transition: 0.3s;">
+                        <svg viewBox="0 0 320 512" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                        </svg>
+                        Facebook Official Page
+                    </a>
+                </div>
+            </div>
 
-    <!-- Blog Grid -->
-    <section class="c">
-        <div class="blog-grid">
-            <a href="/blog/choosing-right-childcare-palmdale/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Parent Guides</span>
-                    <h3>Choosing the Right Child Care in Palmdale: A Parent's Guide</h3>
-                    <p>Finding the perfect daycare in Palmdale can be overwhelming. Learn what to look for...</p>
+            <div class="f-bot">
+                <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p>
+                <p style="opacity: 0.9; font-size: 0.85rem; margin-top: 8px;">
+                    Verified License: <a href="https://www.ccld.dss.ca.gov/carefacilitysearch/FacDetail/197701048"
+                        target="_blank" rel="noopener noreferrer"
+                        style="color: var(--p); text-decoration: underline; font-weight: 600;">#197701048</a>
+                </p>
+                <div style="margin-top: 15px;">
+                    <a href="/privacy/index.html" class="f-link-hover"
+                        style="color: #fff; text-decoration: none; margin-right: 15px; font-size: 0.9rem;">Privacy
+                        Policy</a>
+                    <a href="/terms/index.html" class="f-link-hover"
+                        style="color: #fff; text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
                 </div>
-            </a>
-            <a href="/blog/why-palmdale-families-trust-us/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Trust & Magic: Why Palmdale Families Choose Us</h3>
-                    <p>Discover why Fairy Tale Child Care is the most trusted residential childcare in Palmdale...</p>
-                </div>
-            </a>
-            <a href="/blog/benefits-of-residential-daycare/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Education</span>
-                    <h3>The Magic of Small Groups: Benefits of Residential Daycare</h3>
-                    <p>Why small ratios matter. Discover why residential daycare settings provide superior social...</p>
-                </div>
-            </a>
-            <a href="/blog/our-new-backyard-playground/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Facility News</span>
-                    <h3>Step Into the Magic: Our New Backyard Playground</h3>
-                    <p>We've upgraded! Take a look at our new professional-grade backyard playground...</p>
-                </div>
-            </a>
-            <a href="/blog/when-is-child-ready-for-preschool/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Parent Guides</span>
-                    <h3>Is Your Child Ready for Preschool? 5 Signs to Watch For</h3>
-                    <p>How do you know when it's time for Pre-K? Discover 5 indicators that your child is ready...</p>
-                </div>
-            </a>
-            <a href="/blog/transitioning-to-after-school-care/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Education</span>
-                    <h3>Smooth Sailing: Transitioning to After-School Care</h3>
-                    <p>Make the move to after-school care easy for your child. Tips for Palmdale parents...</p>
-                </div>
-            </a>
-            <a href="/blog/consistent-routine-for-toddlers/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Parent Guides</span>
-                    <h3>The Power of Patterns: Creating a Routine for Toddlers</h3>
-                    <p>Why toddlers need routine and how to build one that works for your family...</p>
-                </div>
-            </a>
-            <a href="/blog/sensory-play-for-infants/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Education</span>
-                    <h3>Sparking Discovery: Sensory Play Activities for Infants</h3>
-                    <p>How to engage your baby's senses through safe, fun play. Discover the benefits...</p>
-                </div>
-            </a>
-            <a href="/blog/daycare-center-vs-residential-care/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Parent Guides</span>
-                    <h3>Small vs. Big: Daycare Centers vs. Residential Care</h3>
-                    <p>Which is right for your child? Comparing the pros and cons of large centers vs. residential...
-                    </p>
-                </div>
-            </a>
-            <a href="/blog/west-palmdale-childcare-resources/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Navigating Palmdale: Local Childcare Resources for Parents</h3>
-                    <p>A guide to local parenting resources, parks, and childcare support in West Palmdale...</p>
-                </div>
-            </a>
-            <a href="/blog/childcare-in-anaverde/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Childcare in Anaverde: Why Fairy Tale is the Local Choice</h3>
-                    <p>Looking for the best childcare near Anaverde? Discover why families in Anaverde prefer us...</p>
-                </div>
-            </a>
-            <a href="/blog/california-residential-daycare-licensing/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>PAA Capture</span>
-                    <h3>Safe & Regulated: CA Residential Daycare Licensing</h3>
-                    <p>What are the rules for residential daycare in CA? Learn about the strict licensing...</p>
-                </div>
-            </a>
-            <a href="/blog/infant-safety-protocols/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Service Deep Dive</span>
-                    <h3>Infant Safety: Our Sleep and Play Protocols</h3>
-                    <p>Your baby's safety is our #1 priority. Learn about our strict infant sleep and play...</p>
-                </div>
-            </a>
-            <a href="/blog/inside-fairy-tale-preschool/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Project Spotlight</span>
-                    <h3>A Day in the Life: Inside the Fairy Tale Preschool Program</h3>
-                    <p>Curious what your child does all day? Take a look inside our magical preschool curriculum...</p>
-                </div>
-            </a>
-            <a href="/blog/palmdale-parenting-guide-2026/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Cornerstone Pillar</span>
-                    <h3>The Ultimate 2026 Palmdale Parenting Resource Guide</h3>
-                    <p>Everything Palmdale parents need to know in 2026. From the best parks to local support...</p>
-                </div>
-            </a>
-            <a href="/blog/handling-daycare-separation-anxiety/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Pro Tip</span>
-                    <h3>Goodbye with a Smile: Handling Daycare Separation Anxiety</h3>
-                    <p>Drop-offs can be hard. Learn expert tips for managing separation anxiety...</p>
-                </div>
-            </a>
-            <a href="/blog/childcare-nutrition-meal-plans/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Service Deep Dive</span>
-                    <h3>Nutrition & Magic: Our Storybook-Themed Meal Plans</h3>
-                    <p>Healthy eating made fun! Learn about our nutritious, fresh-prepared meals...</p>
-                </div>
-            </a>
-            <a href="/blog/after-school-programs-east-palmdale/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Beyond Daycare: After-School Programs in East Palmdale</h3>
-                    <p>Searching for engaging after-school care in East Palmdale? See why our program is the...</p>
-                </div>
-            </a>
-            <a href="/blog/playground-safety-metrics/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>PAA Capture</span>
-                    <h3>Safe at Play: Our Backyard Playground Safety Metrics</h3>
-                    <p>Is the playground safe? Learn about the professional-grade safety standards we maintain...</p>
-                </div>
-            </a>
-            <a href="/blog/our-storybook-reading-nook/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Project Spotlight</span>
-                    <h3>Magic in Every Page: Our Storybook Reading Nook</h3>
-                    <p>Creating a lifelong love of reading. Take a tour of our cozy, themed reading area...</p>
-                </div>
-            </a>
-            <a href="/blog/childcare-options-quartz-hill/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Childcare Options in Quartz Hill: Finding the Best Fit</h3>
-                    <p>Exploring childcare and preschool options in the Quartz Hill community...</p>
-                </div>
-            </a>
-            <a href="/blog/average-cost-residential-daycare-palmdale/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>PAA Capture</span>
-                    <h3>What is the Average Cost of Residential Daycare in Palmdale?</h3>
-                    <p>Understanding childcare costs in the Antelope Valley. A guide to residential daycare pricing...
-                    </p>
-                </div>
-            </a>
-            <a href="/blog/socialization-at-daycare-making-friends/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Service Deep Dive</span>
-                    <h3>Socialization at Daycare: How We Help Kids Make Friends</h3>
-                    <p>Learn how our small group setting fosters deep social bonds...</p>
-                </div>
-            </a>
-            <a href="/blog/art-magic-creative-discovery-station/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Project Spotlight</span>
-                    <h3>Art & Magic: Our Creative Discovery Station</h3>
-                    <p>Take a look at our dedicated art and creativity area where imaginations run wild...</p>
-                </div>
-            </a>
-            <a href="/blog/2026-guide-childcare-financial-assistance-ca/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Cornerstone Pillar</span>
-                    <h3>The 2026 Guide to Childcare Financial Assistance in California</h3>
-                    <p>A comprehensive guide to subsidies, vouchers, and financial aid programs for 2026...</p>
-                </div>
-            </a>
-            <a href="/blog/transitioning-crib-to-cot-daycare-naps/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Pro Tip</span>
-                    <h3>Transitioning from Crib to Cot: How We Handle Naps</h3>
-                    <p>Moving to a nap cot is a big milestone! Learn how we make this transition smooth...</p>
-                </div>
-            </a>
-            <a href="/blog/safe-exploration-sensory-garden-design/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Service Deep Dive</span>
-                    <h3>Safe Exploration: Our Sensory Garden Design</h3>
-                    <p>Discover how our outdoor sensory garden helps children learn about nature...</p>
-                </div>
-            </a>
-            <a href="/blog/weekend-fun-palmdale-families-top-picks/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Locality Anchor</span>
-                    <h3>Weekend Fun for Palmdale Families: Our Top Picks</h3>
-                    <p>Looking for family-friendly activities in Palmdale? Our favorite local spots...</p>
-                </div>
-            </a>
-            <a href="/blog/what-to-pack-first-day-daycare/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>PAA Capture</span>
-                    <h3>What Should I Pack for My Child's First Day of Daycare?</h3>
-                    <p>A handy checklist for parents preparing for their child's exciting first day...</p>
-                </div>
-            </a>
-            <a href="/blog/music-movement-daily-dance-circle/index.html" class="blog-card">
-                <div class="blog-card-content">
-                    <span>Project Spotlight</span>
-                    <h3>Music & Movement: Our Daily Dance Circle</h3>
-                    <p>From nursery rhymes to rhythmic play, see how music and movement spark joy...</p>
-                </div>
-            </a>
-        </div>
-    </section>
+            </div>
 
-    <!-- Footer -->
-    <footer style="background: #2D3436; color: white; padding: 60px 0; text-align: center; margin-top: 60px;">
-        <div class="c">
-            <h4 style="font-family: var(--f-h); font-size: 1.5rem; margin-bottom: 10px;">Fairy Tale Child Care</h4>
-            <p>© 2026 Fairy Tale Child Care. All rights reserved.</p>
-
-            <!-- Neighborhoods SEO Block -->
-            <div class="aw-footer-neighborhoods"
-                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                <h4 style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">Neighborhoods Served</h4>
-                <p style="font-size: 0.8rem; color: #888; line-height: 1.6;">
+            <div class="aw-footer-neighborhoods">
+                <h4 style="font-size: 1.1rem; color: var(--p); margin-bottom: 12px;">Neighborhoods Served</h4>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.7; font-weight: 500;">
                     West Palmdale • East Palmdale • Rancho Vista • Anaverde • Quartz Hill • White Fence Farms •
                     Desert View Highlands • Joshua Ranch • Sun Village • Littlerock • Pearblossom •
                     Anaverde Hills • Palmdale 93551 • Palmdale 93550 • Palmdale 93552
