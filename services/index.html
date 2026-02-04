@@ -7,7 +7,13 @@
     <title>Programs & Services | Fairy Tale Child Care</title>
     <meta name="description"
         content="Explore our nurturing programs for infants, toddlers, preschool, and after-school care. Magical learning environments in Palmdale.">
-    <link rel="canonical" href="https://fairytalechildcare.com/services/">
+    <link rel="canonical" href="/services/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fairytalechildcare.com/services/">
+    <meta property="og:title" content="Programs & Services | Fairy Tale Child Care">
+    <meta property="og:description"
+        content="Explore our nurturing programs for infants, toddlers, preschool, after-school, and more.">
+    <meta property="og:image" content="/images/hero-home.webp">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/styles.css?v=2.1">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css?v=2.4">
+    <link rel="icon" type="image/x-icon" href="https://fairytalechildcare.com/images/favicon.ico">
     <style>
         :root {
-            --p: #FCD85D;
-            --p-pink: #F28FB5;
-            --p-blue: #91D8E4;
+            --p: #FFD93D;
+            --p-pink: #FF6B6B;
+            --p-blue: #2E91D3;
             --d: #00457C;
             --t: #2D3436;
             --l: #FFFDF7;
@@ -183,13 +189,29 @@
                 display: block;
             }
         }
+    
+        .logo { font-family: var(--f-h); font-weight: 400; }
+        .logo .l-1 { color: #2E91D3; } /* F */
+        .logo .l-2 { color: #FF9F43; } /* a */
+        .logo .l-3 { color: #8BC34A; } /* i */
+        .logo .l-4 { color: #FFD93D; } /* r */
+        .logo .l-5 { color: #FF6B6B; } /* y */
+        .logo .l-space { margin-right: 5px; }
+        .logo .l-6 { color: #FF9F43; } /* T */
+        .logo .l-7 { color: #2E91D3; } /* a */
+        .logo .l-8 { color: #FF6B6B; } /* l */
+        .logo .l-9 { color: #FFD93D; } /* e */
+        .logo span.cc { color: var(--p-pink); margin-left: 8px; font-weight: 700; font-family: var(--s); font-size: 0.9em; }
+
     </style>
+
+    <script src="/js/script.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="c">
-            <a href="/" class="logo">Fairy Tale <span>Child Care</span></a>
+            <a href="/" class="logo"><a href="/" class="logo" aria-label="Fairy Tale Child Care Home"><span class="l-1">F</span><span class="l-2">a</span><span class="l-3">i</span><span class="l-4">r</span><span class="l-5">y</span><span class="l-space"></span><span class="l-6">T</span><span class="l-7">a</span><span class="l-8">l</span><span class="l-9">e</span> <span class="cc">Child Care</span></a></a>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -218,64 +240,75 @@
         <section class="c">
             <div class="s-grid">
                 <div class="s-card">
+                    <img src="/images/service-infant-care.webp" alt="Infant Care"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
                     <h2>Infant Care</h2>
                     <p>Nurturing and safe infant care for babies 0-18 months. Small ratios and personalized attention.
                     </p>
                     <a href="/services/infant-care/" class="link">Explore Program &rarr;</a>
                 </div>
                 <div class="s-card">
+                    <img src="/images/service-toddler-care.webp" alt="Toddler Care"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
                     <h2>Toddler Care</h2>
                     <p>Active and engaging toddler care for children 18 months to 3 years. Focused on discovery and
                         social play.</p>
                     <a href="/services/toddler-care/" class="link">Explore Program &rarr;</a>
                 </div>
                 <div class="s-card">
+                    <img src="/images/service-preschool.webp" alt="Preschool"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
                     <h2>Preschool</h2>
                     <p>Spark imagination and prepare for kindergarten with our storybook-themed Pre-K curriculum (ages
                         3-5).</p>
                     <a href="/services/preschool/" class="link">Explore Program &rarr;</a>
                 </div>
                 <div class="s-card">
+                    <img src="/images/service-after-school.webp" alt="After-School Hub"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
                     <h2>After-School</h2>
                     <p>Safe and fun after-school care with homework help, healthy snacks, and plenty of playground time.
                     </p>
                     <a href="/services/after-school/" class="link">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <img src="/images/service-night-weekend.webp" alt="Night & Weekend Care"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
+                    <h2>Night & Weekend Care</h2>
+                    <p>Flexible care during non-traditional hours. Perfect for parents with evening or weekend
+                        commitments.</p>
+                    <a href="/services/night-weekend/" class="link">Explore Program &rarr;</a>
+                </div>
+                <div class="s-card">
+                    <img src="/images/service-summer-camp.webp" alt="Summer Camp"
+                        style="width:100%; border-radius:20px; margin-bottom:20px;">
+                    <h2>Summer Camp</h2>
+                    <p>Outdoor fun, arts, crafts, and educational adventures during the summer months for all ages.</p>
+                    <a href="/services/summer-camp/" class="link">Explore Program &rarr;</a>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="c">
-            <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p>
+            <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p><p style="opacity:0.6; font-size:0.8rem; margin-top:10px;">Facility Number: 197701048</p>
             <div style="margin-top:20px;"><a href="/privacy/"
                     style="color:#fff; text-decoration:none; margin-right:20px;">Privacy</a> <a href="/terms/"
                     style="color:#fff; text-decoration:none;">Terms</a></div>
-        
-                    <!-- Neighborhoods SEO Block -->
-                    <div class="aw-footer-neighborhoods" style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                        <h4 style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">Neighborhoods Served</h4>
-                        <p style="font-size: 0.8rem; color: #888; line-height: 1.6;">
-                            West Palmdale • East Palmdale • Rancho Vista • Anaverde • Quartz Hill • White Fence Farms • 
-                            Desert View Highlands • Joshua Ranch • Sun Village • Littlerock • Pearblossom • 
-                            Anaverde Hills • Palmdale 93551 • Palmdale 93550 • Palmdale 93552
-                        </p>
-                    </div>
-</div>
+
+            <!-- Neighborhoods SEO Block -->
+            <div class="aw-footer-neighborhoods"
+                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <h4 style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">Neighborhoods Served</h4>
+                <p style="font-size: 0.8rem; color: #888; line-height: 1.6;">
+                    West Palmdale • East Palmdale • Rancho Vista • Anaverde • Quartz Hill • White Fence Farms •
+                    Desert View Highlands • Joshua Ranch • Sun Village • Littlerock • Pearblossom •
+                    Anaverde Hills • Palmdale 93551 • Palmdale 93550 • Palmdale 93552
+                </p>
+            </div>
+        </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const t = document.querySelector('.menu-t');
-            const n = document.querySelector('nav');
-            if (t && n) {
-                t.addEventListener('click', () => {
-                    const isV = n.style.display === 'block';
-                    n.style.display = isV ? 'none' : 'block';
-                    n.style.position = 'absolute'; n.style.top = '100%'; n.style.left = '0'; n.style.width = '100%'; n.style.background = '#fff'; n.style.padding = '20px'; n.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                    if (!isV) { n.querySelector('ul').style.flexDirection = 'column'; n.querySelector('ul').style.gap = '15px'; }
-                });
-            }
-        });
-    </script>
+    
 </body>
 
 </html>

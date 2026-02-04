@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fairy Tale Child Care | 100% Reliable in Antelope Valley</title>
+    <title>Fairy Tale Child Care | Top Residential Daycare in Palmdale, CA</title>
     <meta name="description"
-        content="Fast, reputable mobile appliance repair in Palmdale, Lancaster, and Antelope Valley. Refrigerator, washer, dryer, and oven repair. Call 661-XXX-XXXX.">
-    <link rel="canonical" href="https://d3jg5wepg4zxcs.cloudfront.net/">
+        content="Palmdale's premium residential childcare. Fairy Tale Child Care provides a magical, safe environment for infants, toddlers, and preschool with full meal plans.">
+    <link rel="canonical" href="/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://d3jg5wepg4zxcs.cloudfront.net/">
-    <meta property="og:title" content="Fairy Tale Child Care | Antelope Valley">
+    <meta property="og:url" content="https://fairytalechildcare.com/">
+    <meta property="og:title" content="Fairy Tale Child Care | Palmdale's Magical Residential Daycare">
     <meta property="og:description"
-        content="Expert repair for all major brands. Same-day service available. Call 661-XXX-XXXX.">
-    <meta property="og:image" content="https://d3jg5wepg4zxcs.cloudfront.net/images/hero-home.webp">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        content="Nurturing residential childcare in Palmdale. Providing a safe, magical environment where children grow physically, mentally, socially & emotionally.">
+    <meta property="og:image" content="/images/palmdale-residential-daycare-hero.webp">
+    <link rel="icon" type="image/x-icon" href="https://fairytalechildcare.com/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --p: #FCD85D;
+            --p: #FFD93D;
             /* Primary Yellow */
-            --p-pink: #F28FB5;
-            --p-blue: #91D8E4;
-            --p-orange: #FFB84C;
+            --p-pink: #FF6B6B;
+            --p-blue: #2E91D3;
+            --p-orange: #FF9F43;
             --d: #00457C;
             /* Dark Blue from logo */
             --t: #2D3436;
@@ -201,30 +201,45 @@
 
         .s-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            padding: 100px 0;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
         }
 
         .s-card {
-            padding: 45px 35px;
-            border-radius: 35px;
             background: var(--w);
-            border: 1px solid #eee;
-            text-align: left;
-            transition: 0.3s;
-            position: relative;
+            border-radius: 40px;
             overflow: hidden;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
         }
 
         .s-card:hover {
-            border-color: var(--p);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
-            transform: translateY(-5px);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            border-color: var(--p-pink);
+        }
+
+        .s-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 5px solid var(--p);
+        }
+
+        .s-info {
+            padding: 35px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .s-card h3 {
-            font-size: 1.75rem;
+            font-family: var(--f-h);
+            font-size: 1.8rem;
             color: var(--d);
             margin-bottom: 15px;
         }
@@ -232,26 +247,68 @@
         .s-card ul {
             list-style: none;
             margin-bottom: 25px;
+            flex-grow: 1;
         }
 
         .s-card li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
             color: #555;
+            font-weight: 500;
         }
 
         .s-card li::before {
-            content: '\2713';
-            color: var(--p);
-            font-weight: bold;
+            content: '✨';
+            position: absolute;
+            left: 0;
+            color: var(--p-pink);
+        }
+
+        .s-link {
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--p-pink);
+            display: inline-block;
+            margin-top: auto;
+            transition: 0.2s;
+        }
+
+        .s-link:hover {
+            color: var(--d);
+            padding-left: 5px;
         }
 
         .footer {
-            background: #0a0a0a;
+            background: linear-gradient(180deg, var(--d) 0%, #002b4d 100%);
             color: var(--w);
             padding: 80px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(to right, #2E91D3, #FF9F43, #8BC34A, #FFD93D, #FF6B6B);
+        }
+
+        .footer h3,
+        .footer h4 {
+            font-family: var(--f-h);
+            color: var(--p);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer h4 {
+            font-size: 1.5rem;
+            color: #fff;
         }
 
         .f-grid {
@@ -260,13 +317,61 @@
             gap: 50px;
         }
 
+        .f-link-hover:hover {
+            color: var(--p) !important;
+            transform: translateX(5px);
+            opacity: 1 !important;
+        }
+
         .f-bot {
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            opacity: 0.6;
-            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
             text-align: center;
+        }
+
+        .aw-footer-neighborhoods {
+            text-align: center;
+            max-width: 900px;
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .m-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width:768px) {
+            .m-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .m-grid div {
+                order: initial !important;
+            }
+
+            .m-grid img {
+                transform: none !important;
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+
+            .m-grid ul {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .m-grid h2 {
+                font-size: 2.2rem !important;
+            }
         }
 
         .menu-t {
@@ -302,17 +407,81 @@
                 display: none;
             }
         }
+
+        .logo {
+            font-family: var(--f-h);
+            font-weight: 400;
+        }
+
+        .logo .l-1 {
+            color: #2E91D3;
+        }
+
+        /* F */
+        .logo .l-2 {
+            color: #FF9F43;
+        }
+
+        /* a */
+        .logo .l-3 {
+            color: #8BC34A;
+        }
+
+        /* i */
+        .logo .l-4 {
+            color: #FFD93D;
+        }
+
+        /* r */
+        .logo .l-5 {
+            color: #FF6B6B;
+        }
+
+        /* y */
+        .logo .l-space {
+            margin-right: 5px;
+        }
+
+        .logo .l-6 {
+            color: #FF9F43;
+        }
+
+        /* T */
+        .logo .l-7 {
+            color: #2E91D3;
+        }
+
+        /* a */
+        .logo .l-8 {
+            color: #FF6B6B;
+        }
+
+        /* l */
+        .logo .l-9 {
+            color: #FFD93D;
+        }
+
+        /* e */
+        .logo span.cc {
+            color: var(--p-pink);
+            margin-left: 8px;
+            font-weight: 700;
+            font-family: var(--s);
+            font-size: 0.9em;
+        }
     </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Fairy Tale Child Care",
-      "image": "https://d3jg5wepg4zxcs.cloudfront.net/images/hero-home.webp",
-      "url": "https://d3jg5wepg4zxcs.cloudfront.net/",
-      "telephone": "+16614984444",
+      "image": "https://fairytalechildcare.com/images/hero-home.webp",
+      "url": "https://fairytalechildcare.com/",
+      "telephone": "+18189664875",
       "priceRange": "$$",
       "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39300 Kennedy Drive",
         "@type": "PostalAddress",
         "addressLocality": "Palmdale",
         "addressRegion": "CA",
@@ -326,12 +495,21 @@
       }
     }
     </script>
+
+    <link rel="stylesheet" href="/css/styles.css?v=2.4">
+
+    <script src="/js/script.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="c">
-            <a href="/" class="logo" aria-label="Fairy Tale Child Care Home">Fairy Tale <span>Child Care</span></a>
+            <a href="/" class="logo" aria-label="Fairy Tale Child Care Home">
+                <span class="l-1">F</span><span class="l-2">a</span><span class="l-3">i</span><span
+                    class="l-4">r</span><span class="l-5">y</span><span class="l-space"></span><span
+                    class="l-6">T</span><span class="l-7">a</span><span class="l-8">l</span><span class="l-9">e</span>
+                <span class="cc">Child Care</span>
+            </a>
             <nav aria-label="Main Navigation">
                 <ul>
                     <li><a href="/" class="a">Home</a></li>
@@ -341,7 +519,7 @@
                 </ul>
             </nav>
             <div class="header-actions m-hide">
-                <a href="tel:6614984444" class="b b-p" aria-label="Call for Repair">661-XXX-XXXX</a>
+                <a href="tel:8189664875" class="b b-p" aria-label="Call for Repair">(818) 966-4875</a>
             </div>
             <button class="menu-t" aria-label="Toggle Menu">
                 <svg viewBox="0 0 448 512" width="24" height="24" fill="#004488">
@@ -354,20 +532,179 @@
     <main>
         <section class="hero" aria-label="Hero Section">
             <div class="c">
-                <h1>Happy Childhood Memories Start Here</h1>
-                <p>Palmdale's magical residential childcare. A safe, nurturing, and fun environment where your little
-                    ones can grow and play in our beautiful backyard playground.</p>
-                <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-                    <a href="tel:661-XXX-XXXX" class="b b-p" style="color:#00457C;">Call Us Today</a>
-                    <a href="/about/" class="b" style="border:2px solid #fff; color:#fff;">Our Story</a>
+                <div class="hero-content">
+                    <h1>Happy Childhood Memories Start Here</h1>
+                    <p>Palmdale's magical residential
+                        childcare where children grow <strong>physically, mentally, socially & emotionally</strong> in a
+                        safe, stimulating, and nurturing environment. <strong>Enrolling Now!</strong></p>
+                    <div class="hero-btns">
+                        <a href="tel:(818) 966-4875" class="b b-p">Call Us Today</a>
+                        <a href="/contact/" class="b b-outline">Register Now</a>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="feats">
-            <div class="c">
+
+        <!-- Video Intro Section -->
+        <section
+            style="padding: 100px 0; background: linear-gradient(135deg, #fff5f8 0%, #f0f7ff 50%, #fff9f0 100%); position: relative; overflow: hidden;">
+            <!-- Decorative Rainbow Elements -->
+            <div
+                style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(242,143,181,0.1) 0%, transparent 70%); border-radius: 50%;">
+            </div>
+            <div
+                style="position: absolute; bottom: -50px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(145,216,228,0.1) 0%, transparent 70%); border-radius: 50%;">
+            </div>
+
+            <div class="c" style="position: relative; z-index: 2;">
                 <div class="st">
-                    <h2>Why Choose Us?</h2>
-                    <p>We provide premium service with local expertise.</p>
+                    <h2 style="font-family: var(--f-h); font-size: 3rem; color: var(--d); margin-bottom: 15px;">✨
+                        Experience the Magic ✨</h2>
+                    <p style="font-size: 1.2rem; color: #555; max-width: 600px; margin: 0 auto 40px;">Take a peek inside
+                        our daily adventures, where every day is a new story waiting to be told.</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
+                    <!-- Video Container with Rainbow Glow -->
+                    <div
+                        style="max-width: 380px; width: 100%; aspect-ratio: 9/16; border-radius: 45px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.12); background: #fff; border: 12px solid #fff; position: relative; transition: transform 0.3s ease;">
+                        <iframe
+                            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1271465488362494%2F&show_text=false&t=0"
+                            style="border:none; overflow:hidden; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            scrolling="no" frameborder="0" allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+
+                    <!-- Facebook CTA Button -->
+                    <a href="https://www.facebook.com/profile.php?id=100093238903254" target="_blank" class="b"
+                        style="background: #1877F2; color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 25px rgba(24,119,242,0.3); transition: all 0.3s ease;">
+                        <svg viewBox="0 0 320 512" width="22" height="22" fill="currentColor">
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                        </svg>
+                        Follow Our Magic on Facebook
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section
+            style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #fdf9ff 100%); position: relative; overflow: hidden;">
+            <!-- Soft Decorative Blobs -->
+            <div
+                style="position: absolute; top: 10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,107,107,0.05) 0%, transparent 70%); border-radius: 50%;">
+            </div>
+            <div
+                style="position: absolute; bottom: 10%; left: -5%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(46,145,211,0.05) 0%, transparent 70%); border-radius: 50%;">
+            </div>
+
+            <div class="c" style="position: relative; z-index: 2;">
+                <div class="m-grid">
+                    <div style="position: relative;">
+                        <img src="/images/palmdale-daycare-reading-nook.webp"
+                            alt="Reading and Writing Room at Fairy Tale Child Care"
+                            style="width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transform: rotate(-2deg);">
+                        <div
+                            style="position: absolute; bottom: 20px; left: 20px; background: var(--p); padding: 10px 20px; border-radius: 15px; font-weight: 700; font-family: var(--f-h);">
+                            Ready for Reading!</div>
+                    </div>
+                    <div>
+                        <h2 style="font-family: var(--f-h); font-size: 2.8rem; color: var(--d); margin-bottom: 20px;">A
+                            Place Where Stories Come Alive</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 25px;">Our dedicated
+                            <strong>Reading & Writing Room</strong> is designed to inspire a lifelong love for learning.
+                            With cozy nooks and age-appropriate books, your child will embark on magical journeys every
+                            day.
+                        </p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-pink); font-size: 1.5rem;">⭐</span> Early Literacy & Language
+                                Skills</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-pink); font-size: 1.5rem;">⭐</span> Creative Writing &
+                                Storytelling</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-pink); font-size: 1.5rem;">⭐</span> Focused Small-Group
+                                Learning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="m-grid" style="margin-top: 80px;">
+                    <div style="order: 2; position: relative;">
+                        <img src="/images/palmdale-childcare-group-activity.webp"
+                            alt="Group Activities at Fairy Tale Child Care"
+                            style="width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transform: rotate(2deg);">
+                        <div
+                            style="position: absolute; bottom: 20px; right: 20px; background: var(--p-blue); color: #fff; padding: 10px 20px; border-radius: 15px; font-weight: 700; font-family: var(--f-h);">
+                            Learning Together!</div>
+                    </div>
+                    <div style="order: 1;">
+                        <h2 style="font-family: var(--f-h); font-size: 2.8rem; color: var(--d); margin-bottom: 20px;">
+                            Joyful Discoveries Together</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 25px;">Social growth
+                            is at the heart of what we do. Through our unique <strong>Fairy Tale Enrichment</strong>
+                            activities, children learn the value of friendship, teamwork, and kindness.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-blue); font-size: 1.5rem;">🎨</span> Arts, Crafts & Sensory
+                                Play</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-blue); font-size: 1.5rem;">🎨</span> Musical Expression &
+                                Movement</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-blue); font-size: 1.5rem;">🎨</span> Cooperative Games &
+                                Socializing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="m-grid" style="margin-top: 80px;">
+                    <div style="position: relative;">
+                        <img src="/images/palmdale-daycare-children-learning.webp"
+                            alt="Children Learning at Fairy Tale Child Care"
+                            style="width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transform: rotate(-1deg);">
+                        <div
+                            style="position: absolute; bottom: 20px; left: 20px; background: var(--p-orange); color: #fff; padding: 10px 20px; border-radius: 15px; font-weight: 700; font-family: var(--f-h);">
+                            Future Leaders!</div>
+                    </div>
+                    <div>
+                        <h2 style="font-family: var(--f-h); font-size: 2.8rem; color: var(--d); margin-bottom: 20px;">
+                            Guided by Care, Inspired by Magic</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 25px;">Our small
+                            group
+                            settings ensure that every child receives the <strong>personalized attention</strong> they
+                            deserve. We focus on individual developmental milestones while fostering a sense of
+                            community.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-orange); font-size: 1.5rem;">📚</span> Personalized Guidance &
+                                Support</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-orange); font-size: 1.5rem;">📚</span> Cognitive & Motor
+                                Development</li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;"><span
+                                    style="color: var(--p-orange); font-size: 1.5rem;">📚</span> School Readiness
+                                Preparation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feats"
+            style="background: linear-gradient(180deg, #fffdf8 0%, #fff5e6 100%); position: relative; overflow: hidden;">
+            <!-- Decorative Dots Pattern (Subtle) -->
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(rgba(255, 159, 67, 0.05) 2px, transparent 2px); background-size: 30px 30px; opacity: 0.5;">
+            </div>
+
+            <div class="c" style="position: relative; z-index: 2;">
+                <div class="st">
+                    <h2 style="font-family: var(--f-h); font-size: 3rem; color: var(--d);">Why Choose Us?</h2>
+                    <p style="font-size: 1.2rem; color: #555;">We provide premium service with local expertise and a lot
+                        of heart.</p>
                 </div>
                 <div class="g4">
                     <div class="card">
@@ -378,15 +715,17 @@
                                 d="M448 0H64C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zM64 48h384c8.8 0 16 7.2 16 16v30.1c-16.4-9.3-35.5-14.1-55.5-14.1-62.1 0-112.5 50.4-112.5 112.5S346.4 305 408.5 305c20 0 39.1-4.8 55.5-14.1V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16zm344.5 225c-44.4 0-80.5-36.1-80.5-80.5s36.1-80.5 80.5-80.5 80.5 36.1 80.5 80.5-36.1 80.5-80.5 80.5z" />
                         </svg>
                         <h3>Magical Learning</h3>
-                        <p>A storybook-themed environment that sparks imagination and curiosity.</p>
+                        <p>A storybook-themed environment that sparks imagination and curiosity every single day.</p>
                     </div>
                     <div class="card">
                         <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-blue);">
                             <path
                                 d="M256 64c53 0 96 43 96 96s-43 96-96 96-96-43-96-96 43-96 96-96m0 224c106 0 192 86 192 192H64c0-106 86-192 192-192" />
                         </svg>
-                        <h3>Safe & Secure</h3>
-                        <p>Fully licensed facility with small groups for personalized, safe care.</p>
+                        <h3>Premium Safety</h3>
+                        <p>Fully licensed facility. 100% <strong>Smoke Free & Pet Free</strong> environment for your
+                            child's
+                            health.</p>
                     </div>
                     <div class="card">
                         <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-pink);">
@@ -400,41 +739,147 @@
                         <svg class="icon" viewBox="0 0 512 512" style="fill:var(--p-orange);">
                             <path d="M256 0L0 256h96v256h320V256h96z" />
                         </svg>
-                        <h3>Nutritious Meals</h3>
-                        <p>Balanced, home-cooked healthy meals prepared fresh every daily.</p>
+                        <h3>Healthy Meals</h3>
+                        <p>Balanced, home-cooked meals including <strong>Breakfast, Snack, Lunch & Dinner</strong>
+                            prepared
+                            fresh daily.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:#8BC34A;">
+                            <path
+                                d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7 5.4-4.4 8.9-11.2 8.9-18.7v-16c0-7.5-3.5-14.3-8.9-18.7 5.4-4.4 8.9-11.2 8.9-18.7zM96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32h320v64H96zM64 96c0-17.7 14.3-32 32-32h320v288H96c-17.7 0-32 14.3-32 32V96z" />
+                        </svg>
+                        <h3>Academic Success</h3>
+                        <p>Dedicated <strong>homework help</strong> and school-readiness curriculum to ensure your child
+                            excels.</p>
+                    </div>
+                    <div class="card">
+                        <svg class="icon" viewBox="0 0 512 512" style="fill:#9B59B6;">
+                            <path
+                                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-62.9V112c0-13.3-10.7-24-24-24s-24 10.7-24 24v136c0 6.6 2.7 12.9 7.4 17.5l100.2 74.2c11 8.1 26.5 6 34.6-5s6-26.5-5-34.6z" />
+                        </svg>
+                        <h3>Flexible Care</h3>
+                        <p>Full-time, part-time, and <strong>shift-worker friendly</strong> care, including nights and
+                            weekends.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="c">
-            <div class="s-grid">
-                <div class="s-card">
-                    <h3>Infant & Toddler</h3>
-                    <ul>
-                        <li>Nurturing care (0-2y)</li>
-                        <li>Sensory play</li>
-                        <li>Safe sleep environment</li>
-                    </ul>
-                    <a href="/services/toddler-care/" aria-label="Learn about toddler care">Explore Program &rarr;</a>
+
+        <section id="programs"
+            style="padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%); position: relative; overflow: hidden;">
+            <!-- Floating Cloud Shapes (Subtle) -->
+            <div
+                style="position: absolute; top: 5%; left: 10%; width: 100px; height: 100px; background: rgba(255,255,255,0.8); border-radius: 50%; filter: blur(20px);">
+            </div>
+            <div
+                style="position: absolute; top: 15%; right: 15%; width: 150px; height: 150px; background: rgba(255,255,255,0.6); border-radius: 50%; filter: blur(30px);">
+            </div>
+
+            <div class="c" style="position: relative; z-index: 2;">
+                <div class="st">
+                    <h2 style="font-family: var(--f-h); font-size: 3.2rem; color: var(--d);">Our Magical Programs</h2>
+                    <p style="font-size: 1.25rem; color: #555;">Nurturing environments tailored for every stage of
+                        childhood discovery.</p>
                 </div>
-                <div class="s-card">
-                    <h3>Pre-K Learning</h3>
-                    <ul>
-                        <li>Preschool curriculum</li>
-                        <li>Social development</li>
-                        <li>Creative arts & crafts</li>
-                    </ul>
-                    <a href="/services/preschool/" aria-label="Learn about pre-k programs">Explore Program &rarr;</a>
-                </div>
-                <div class="s-card">
-                    <h3>After-School</h3>
-                    <ul>
-                        <li>Homework assistance</li>
-                        <li>Outdoor playground fun</li>
-                        <li>Healthy afternoon snacks</li>
-                    </ul>
-                    <a href="/services/after-school/" aria-label="Learn about after school care">Explore Program
-                        &rarr;</a>
+                <div class="s-grid">
+                    <!-- 1. Infant Care -->
+                    <div class="s-card">
+                        <img src="/images/palmdale-infant-nursery-care.webp"
+                            alt="Safe and Nurturing Infant Care Room in Palmdale" class="s-img">
+                        <div class="s-info">
+                            <h3>Infant Care</h3>
+                            <ul>
+                                <li>Nurturing care (0-18 months)</li>
+                                <li>Safe sleep protocols</li>
+                                <li>Sensory discovery activities</li>
+                            </ul>
+                            <a href="/services/infant-care/" class="s-link" aria-label="Learn about infant care">Explore
+                                Program &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Toddler Care -->
+                    <div class="s-card">
+                        <img src="/images/palmdale-toddler-playground.webp"
+                            alt="Toddlers playing safely at our magical playground in Palmdale" class="s-img">
+                        <div class="s-info">
+                            <h3>Toddler Discovery</h3>
+                            <ul>
+                                <li>Active play (18 months - 3 years)</li>
+                                <li>Early language immersion</li>
+                                <li>Magical outdoor adventures</li>
+                            </ul>
+                            <a href="/services/toddler-care/" class="s-link"
+                                aria-label="Learn about toddler care">Explore
+                                Program &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="s-card">
+                        <img src="/images/palmdale-preschool-learning.webp"
+                            alt="Preschool children learning in our magical storybook classroom in Palmdale"
+                            class="s-img">
+                        <div class="s-info">
+                            <h3>Preschool / Pre-K</h3>
+                            <ul>
+                                <li>Academy readiness (3-5 years)</li>
+                                <li>Storybook-themed curriculum</li>
+                                <li>Arts, Crafts & Discovery</li>
+                            </ul>
+                            <a href="/services/preschool/" class="s-link" aria-label="Learn about preschool">Explore
+                                Program
+                                &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 4. After School -->
+                    <div class="s-card">
+                        <img src="/images/palmdale-after-school-fun.webp"
+                            alt="Educational After-School Homework Hub and Recreation" class="s-img">
+                        <div class="s-info">
+                            <h3>After-School Hub</h3>
+                            <ul>
+                                <li>Academic support & <strong>Homework Help</strong></li>
+                                <li>Healthy afternoon snacks</li>
+                                <li>Safe outdoor recreation</li>
+                            </ul>
+                            <a href="/services/after-school/" class="s-link"
+                                aria-label="Learn about after school care">Explore Program &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- 5. Night & Weekend -->
+                    <div class="s-card">
+                        <img src="/images/palmdale-night-weekend-care.webp"
+                            alt="Safe and cozy nighttime sleeping area for overnight childcare in Palmdale"
+                            class="s-img">
+                        <div class="s-info">
+                            <h3>Night & Weekend</h3>
+                            <ul>
+                                <li>Shift-worker friendly care</li>
+                                <li>Safe, cozy environment</li>
+                                <li>Peaceful bedtime routines</li>
+                            </ul>
+                            <a href="/services/night-weekend/" class="s-link"
+                                aria-label="Learn about night and weekend care">Explore Program &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="s-card">
+                        <img src="/images/palmdale-summer-magic-discovery.webp"
+                            alt="Summer Magic Camp outdoor discovery activities in Palmdale" class="s-img">
+                        <div class="s-info">
+                            <h3>Summer Magic Camp</h3>
+                            <ul>
+                                <li>Outdoor nature exploration</li>
+                                <li>Arts, Crafts & Water Play</li>
+                                <li>Discovery-based learning</li>
+                            </ul>
+                            <a href="/services/summer-camp/" class="s-link" aria-label="Learn about summer camp">Explore
+                                Program &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -443,30 +888,46 @@
         <div class="c">
             <div class="f-grid">
                 <div>
-                    <h3>Fairy Tale Child Care</h3>
-                    <p style="opacity:0.7; margin-top:15px; max-width:300px;">Palmdale's premier residential childcare,
+                    <h3 style="color: var(--p);">Fairy Tale Child Care</h3>
+                    <p style="opacity: 0.9; margin-top: 5px; max-width: 320px;">Palmdale's premier residential
+                        childcare,
                         providing a magical and safe environment for children to learn, grow, and play.</p>
                 </div>
                 <div>
-                    <h4 style="margin-bottom:20px;">Contact Us</h4>
-                    <p style="opacity:0.8;">Call: <a href="tel:6614984444"
-                            style="color:#fff; font-weight:700;">661-XXX-XXXX</a></p>
-                    <p style="opacity:0.8; margin-top:5px;">Palmdale • Lancaster • Quartz Hill</p>
+                    <h4>Contact Us</h4>
+                    <p style="margin-bottom: 8px;">Call: <a href="tel:8189664875" class="f-link-hover"
+                            style="color: var(--p); text-decoration: none; font-weight: 700; transition: 0.3s;">(818)
+                            966-4875</a></p>
+                    <p style="opacity: 0.9;">Palmdale • Lancaster • Quartz Hill</p>
                 </div>
-
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/profile.php?id=100093238903254" target="_blank"
+                        class="f-link-hover"
+                        style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; opacity: 0.9; transition: 0.3s;">
+                        <svg viewBox="0 0 320 512" width="20" height="20" fill="currentColor">
+                            <path
+                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                        </svg>
+                        Facebook Official Page
+                    </a>
+                </div>
             </div>
+
             <div class="f-bot">
                 <p>&copy; 2026 Fairy Tale Child Care. All rights reserved.</p>
-                <div style="margin-top:15px;"><a href="/privacy/"
-                        style="color:#fff; text-decoration:none; margin-right:20px;">Privacy</a> <a href="/terms/"
-                        style="color:#fff; text-decoration:none;">Terms</a></div>
+                <p style="opacity: 0.7; font-size: 0.8rem; margin-top: 5px;">Facility Number: 197701048</p>
+                <div style="margin-top: 15px;">
+                    <a href="/privacy/" class="f-link-hover"
+                        style="color: #fff; text-decoration: none; margin-right: 20px;">Privacy</a>
+                    <a href="/terms/" class="f-link-hover" style="color: #fff; text-decoration: none;">Terms</a>
+                </div>
             </div>
 
             <!-- Neighborhoods SEO Block -->
-            <div class="aw-footer-neighborhoods"
-                style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-                <h4 style="font-size: 0.9rem; color: #aaa; margin-bottom: 10px;">Neighborhoods Served</h4>
-                <p style="font-size: 0.8rem; color: #888; line-height: 1.6;">
+            <div class="aw-footer-neighborhoods">
+                <h4 style="font-size: 1.1rem; color: var(--p); margin-bottom: 12px;">Neighborhoods Served</h4>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.7; font-weight: 500;">
                     West Palmdale • East Palmdale • Rancho Vista • Anaverde • Quartz Hill • White Fence Farms •
                     Desert View Highlands • Joshua Ranch • Sun Village • Littlerock • Pearblossom •
                     Anaverde Hills • Palmdale 93551 • Palmdale 93550 • Palmdale 93552
@@ -474,29 +935,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const t = document.querySelector('.menu-t');
-            const n = document.querySelector('nav');
-            if (t && n) {
-                t.addEventListener('click', () => {
-                    const isV = n.style.display === 'block';
-                    n.style.display = isV ? 'none' : 'block';
-                    n.style.position = 'absolute';
-                    n.style.top = '100%';
-                    n.style.left = '0';
-                    n.style.width = '100%';
-                    n.style.background = '#fff';
-                    n.style.padding = '20px';
-                    n.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                    if (!isV) {
-                        n.querySelector('ul').style.flexDirection = 'column';
-                        n.querySelector('ul').style.gap = '15px';
-                    }
-                });
-            }
-        });
-    </script>
+
 </body>
 
 </html>
