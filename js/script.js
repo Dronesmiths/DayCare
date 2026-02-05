@@ -86,9 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
     cursor.className = 'custom-cursor';
     document.body.appendChild(cursor);
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+    // Initial state: hide cursor until first move
+    cursor.style.opacity = '0';
+
+    const updateCursor = (e) => {
+        cursor.style.opacity = '1';
+        let x, y;
+        if (e.type.startsWith('touch')) {
+            const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
+            if (!touch) return;
+            x = touch.clientX;
+            y = touch.clientY;
+        } else {
+            x = e.clientX;
+            y = e.clientY;
+        }
+
+        cursor.style.left = x + 'px';
+        cursor.style.top = y + 'px';
 
         // Create pixie dust particle
         const particle = document.createElement('div');
@@ -96,11 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Randomize initial position slightly around the cursor
         const offset = 10;
-        const x = e.clientX + (Math.random() * offset - offset / 2);
-        const y = e.clientY + (Math.random() * offset - offset / 2);
+        const px = x + (Math.random() * offset - offset / 2);
+        const py = y + (Math.random() * offset - offset / 2);
 
-        particle.style.left = x + 'px';
-        particle.style.top = y + 'px';
+        particle.style.left = px + 'px';
+        particle.style.top = py + 'px';
 
         document.body.appendChild(particle);
 
@@ -108,9 +123,18 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             particle.remove();
         }, 800);
-    });
+    };
 
-    // Handle mouse leaving the window
+    document.addEventListener('mousemove', updateCursor);
+    document.addEventListener('touchmove', (e) => {
+        updateCursor(e);
+    }, { passive: true });
+
+    document.addEventListener('touchstart', (e) => {
+        updateCursor(e);
+    }, { passive: true });
+
+    // Handle mouse leaving/entering the window
     document.addEventListener('mouseleave', () => {
         cursor.style.opacity = '0';
     });
@@ -129,4 +153,40 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
         });
     });
+
+    // 5. Sticky Video Logic
+    const videoSection = document.getElementById('magical-video-section');
+    const videoWrapper = document.getElementById('magical-video-wrapper');
+    const closeBtn = document.querySelector('.video-close');
+    let videoDismissed = false;
+
+    if (videoSection && videoWrapper) {
+        // Track interaction just in case we want to use it later, 
+        // but it's no longer a blocker for stickiness.
+        videoWrapper.addEventListener('click', () => {
+            console.log('Video clicked');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If the main video section is NOT visible AND NOT dismissed
+                if (!entry.isIntersecting && !videoDismissed) {
+                    videoWrapper.classList.add('sticky-video');
+                } else {
+                    videoWrapper.classList.remove('sticky-video');
+                }
+            });
+        }, { threshold: 0 });
+
+        observer.observe(videoSection);
+
+        // Close functionality
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                videoWrapper.classList.remove('sticky-video');
+                videoDismissed = true;
+            });
+        }
+    }
 });
