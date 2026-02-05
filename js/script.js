@@ -154,39 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Sticky Video Logic
-    const videoSection = document.getElementById('magical-video-section');
-    const videoWrapper = document.getElementById('magical-video-wrapper');
-    const closeBtn = document.querySelector('.video-close');
-    let videoDismissed = false;
+    // 5. Sticky Video Logic REMOVED per user request
 
-    if (videoSection && videoWrapper) {
-        // Track interaction just in case we want to use it later, 
-        // but it's no longer a blocker for stickiness.
-        videoWrapper.addEventListener('click', () => {
-            console.log('Video clicked');
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If the main video section is NOT visible AND NOT dismissed
-                if (!entry.isIntersecting && !videoDismissed) {
-                    videoWrapper.classList.add('sticky-video');
-                } else {
-                    videoWrapper.classList.remove('sticky-video');
-                }
-            });
-        }, { threshold: 0 });
-
-        observer.observe(videoSection);
-
-        // Close functionality
-        if (closeBtn) {
-            closeBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                videoWrapper.classList.remove('sticky-video');
-                videoDismissed = true;
-            });
-        }
-    }
 });
