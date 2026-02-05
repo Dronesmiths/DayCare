@@ -81,78 +81,65 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // 4. Custom Fairy Cursor
-    const cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
+    // 4. Custom Fairy Cursor (Desktop Only)
+    if (window.innerWidth > 768) {
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
 
-    // Initial state: hide cursor until first move
-    cursor.style.opacity = '0';
-
-    const updateCursor = (e) => {
-        cursor.style.opacity = '1';
-        let x, y;
-        if (e.type.startsWith('touch')) {
-            const touch = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]);
-            if (!touch) return;
-            x = touch.clientX;
-            y = touch.clientY;
-        } else {
-            x = e.clientX;
-            y = e.clientY;
-        }
-
-        cursor.style.left = x + 'px';
-        cursor.style.top = y + 'px';
-
-        // Create pixie dust particle
-        const particle = document.createElement('div');
-        particle.className = 'pixie-dust';
-
-        // Randomize initial position slightly around the cursor
-        const offset = 10;
-        const px = x + (Math.random() * offset - offset / 2);
-        const py = y + (Math.random() * offset - offset / 2);
-
-        particle.style.left = px + 'px';
-        particle.style.top = py + 'px';
-
-        document.body.appendChild(particle);
-
-        // Remove particle after animation ends
-        setTimeout(() => {
-            particle.remove();
-        }, 800);
-    };
-
-    document.addEventListener('mousemove', updateCursor);
-    document.addEventListener('touchmove', (e) => {
-        updateCursor(e);
-    }, { passive: true });
-
-    document.addEventListener('touchstart', (e) => {
-        updateCursor(e);
-    }, { passive: true });
-
-    // Handle mouse leaving/entering the window
-    document.addEventListener('mouseleave', () => {
+        // Initial state: hide cursor until first move
         cursor.style.opacity = '0';
-    });
 
-    document.addEventListener('mouseenter', () => {
-        cursor.style.opacity = '1';
-    });
+        const updateCursor = (e) => {
+            cursor.style.opacity = '1';
+            const x = e.clientX;
+            const y = e.clientY;
 
-    // Hover effect for interactive elements
-    const interactables = document.querySelectorAll('a, button, .btn');
-    interactables.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.2) rotate(15deg)';
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+
+            // Create pixie dust particle
+            const particle = document.createElement('div');
+            particle.className = 'pixie-dust';
+
+            // Randomize initial position slightly around the cursor
+            const offset = 10;
+            const px = x + (Math.random() * offset - offset / 2);
+            const py = y + (Math.random() * offset - offset / 2);
+
+            particle.style.left = px + 'px';
+            particle.style.top = py + 'px';
+
+            document.body.appendChild(particle);
+
+            // Remove particle after animation ends
+            setTimeout(() => {
+                particle.remove();
+            }, 800);
+        };
+
+        document.addEventListener('mousemove', updateCursor);
+
+        // Handle mouse leaving/entering the window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
         });
-        el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
         });
-    });
+
+        // Hover effect for interactive elements
+        const interactables = document.querySelectorAll('a, button, .btn');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.2) rotate(15deg)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)';
+            });
+        });
+    }
 
     // 5. Sticky Video Logic REMOVED per user request
 
