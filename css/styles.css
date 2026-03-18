@@ -283,11 +283,6 @@ header .c {
     position: relative;
 }
 
-.service-content li::before {
-    content: '🎠';
-    position: absolute;
-    left: 0;
-}
 
 /* Desktop Navigation */
 nav ul {
@@ -611,12 +606,7 @@ nav a.a {
     color: #555;
 }
 
-.s-info li::before {
-    content: '✨';
-    position: absolute;
-    left: 0;
-    color: var(--p-orange);
-}
+
 
 .s-link {
     font-weight: 700;

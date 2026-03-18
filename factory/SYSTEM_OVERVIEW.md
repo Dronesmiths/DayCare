@@ -3,7 +3,7 @@
 ## 1. Project Identity
 - **Business**: Fairy Tale Child Care
 - **Niche**: Residential Childcare / Daycare (Palmdale, CA)
-- **Domain**: d10n3vuagkaa62.cloudfront.net (Production)
+- **Domain**: fairytalechildcare.com (Production)
 - **Phone**: [TBD]
 - **Email**: [TBD]
 
@@ -44,7 +44,7 @@
 - **Method**: Git-driven deployment (AWS S3/CloudFront).
 - **S3 Bucket**: `fairytale-childcare-palmdale`
 - **CloudFront ID**: `EUU0HJFXZUE4L`
-- **CloudFront URL**: `https://d10n3vuagkaa62.cloudfront.net`
+- **CloudFront URL**: `https://fairytalechildcare.com`
 - **Repository**: `https://github.com/Dronesmiths/DayCare.git` (main branch).
 
 ---
