@@ -603,7 +603,8 @@ nav a.a {
     margin-bottom: 12px;
     position: relative;
     padding-left: 30px;
-    color: #555;
+    color: #333;
+    font-weight: 600;
 }
 
 
@@ -2049,4 +2050,36 @@ nav a.a {
         max-height: 350px;
         border-radius: 20px;
     }
+}
+.m-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.m-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+@media (max-width: 968px) {
+    .m-list li {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 968px) {
+    .m-grid > div {
+        order: 0 !important;
+    }
+}
+
+.card p {
+    font-weight: 600;
+    color: #333;
+}
+
+.m-list li {
+    font-weight: 700;
+    color: var(--d);
 }
