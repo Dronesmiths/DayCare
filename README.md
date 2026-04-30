@@ -4,7 +4,7 @@ High-authority static website for Fairy Tale Child Care in Palmdale, CA.
 
 ## Technical Info
 - **Architecture**: Static HTML5/CSS3
-- **Deployment**: AWS S3 + CloudFront
+- **Deployment**: Cloudflare Pages
 - **Niche**: Residential Childcare / Daycare
 - **Optimization**: All images WebP, optimized for PageSpeed 100/100/100.
 
