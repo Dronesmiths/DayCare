@@ -55,8 +55,6 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     background-color: var(--white);
-    cursor: none;
-    /* Hide default cursor */
 }
 
 .custom-cursor {
@@ -100,7 +98,6 @@ body {
 a,
 button,
 .btn {
-    cursor: none;
 }
 
 h1,
@@ -136,7 +133,6 @@ a {
     border-radius: var(--border-radius-pill);
     font-weight: 700;
     text-align: center;
-    cursor: none;
     transition: all 0.3s ease;
     border: none;
     text-decoration: none;

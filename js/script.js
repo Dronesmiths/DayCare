@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // 4. Custom Fairy Cursor (Desktop Only)
+    // 4. Custom Fairy Cursor (Desktop Only) - DISABLED to show native cursor
+    /*
     if (window.innerWidth > 768) {
         const cursor = document.createElement('div');
         cursor.className = 'custom-cursor';
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    */
 
     // 5. Sticky Video Logic REMOVED per user request
 
