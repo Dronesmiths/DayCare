@@ -2136,3 +2136,43 @@ nav a.a {
         scroll-snap-align: center;
     }
 }
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+}
+.gallery-arrow {
+    position: absolute;
+    top: calc(50% - 30px);
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: var(--d);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.gallery-arrow:hover {
+    background: var(--p);
+    color: var(--d);
+    transform: translateY(-50%) scale(1.1);
+}
+.prev-arrow {
+    left: -20px;
+}
+.next-arrow {
+    right: -20px;
+}
+@media (max-width: 768px) {
+    .gallery-arrow {
+        display: none; /* Hide arrows on mobile since swiping is natural */
+    }
+}

@@ -145,4 +145,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Sticky Video Logic REMOVED per user request
 
+    // 6. Gallery Slider Logic
+    const slider = document.getElementById('photo-slider');
+    const prevBtn = document.querySelector('.prev-arrow');
+    const nextBtn = document.querySelector('.next-arrow');
+
+    if (slider && prevBtn && nextBtn) {
+        // Calculate scroll amount based on first item width
+        const getScrollAmount = () => {
+            const firstItem = slider.querySelector('.gallery-item');
+            if (firstItem) {
+                // width + gap
+                return firstItem.offsetWidth + 18;
+            }
+            return 338; // fallback
+        };
+
+        const scrollSlider = (direction) => {
+            const scrollAmount = getScrollAmount();
+            let newScrollPosition = slider.scrollLeft + (direction * scrollAmount);
+            
+            // If we hit the end, loop back to start
+            if (direction === 1 && newScrollPosition >= slider.scrollWidth - slider.clientWidth) {
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } 
+            // If we hit the start and go backwards, loop to end
+            else if (direction === -1 && slider.scrollLeft <= 0) {
+                slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+            } 
+            // Normal scroll
+            else {
+                slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        };
+
+        // Arrow clicks
+        prevBtn.addEventListener('click', () => scrollSlider(-1));
+        nextBtn.addEventListener('click', () => scrollSlider(1));
+
+        // Auto-scroll every 3.5 seconds
+        let autoScrollTimer = setInterval(() => scrollSlider(1), 3500);
+
+        // Pause auto-scroll when user interacts
+        const pauseScroll = () => {
+            clearInterval(autoScrollTimer);
+        };
+        
+        const resumeScroll = () => {
+            clearInterval(autoScrollTimer);
+            autoScrollTimer = setInterval(() => scrollSlider(1), 3500);
+        };
+
+        slider.addEventListener('mouseenter', pauseScroll);
+        slider.addEventListener('mouseleave', resumeScroll);
+        slider.addEventListener('touchstart', pauseScroll, {passive: true});
+        slider.addEventListener('touchend', resumeScroll);
+    }
+
 });
